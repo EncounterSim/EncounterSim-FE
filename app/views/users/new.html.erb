@@ -1,8 +1,6 @@
 <h1>Create an Account</h1>
 
 <%= form_with model: @user do |form| %>
-  <%= form.label :username, 'Username:' %>
-  <%= form.text_field :username %>
   <%= form.label :email, 'Email:' %>
   <%= form.text_field :email %>
   <%= form.label :password, 'Password:' %>
