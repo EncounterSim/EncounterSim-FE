@@ -28,6 +28,10 @@ Designed for use with EncounterSim-BE.
 ## Summary of Work
 
 ## Contributors
+- [Robert deLaguna](https://github.com/rjdelaguna)
+- [Kaylee Janes](https://github.com/kbug819)
+- [Connor Richmond](https://github.com/ConnorRichmond)
+- [Nicholas Spencer](https://github.com/deadbert)
 
 
 This README would normally document whatever steps are necessary to get the
