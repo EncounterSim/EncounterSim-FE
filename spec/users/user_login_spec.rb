@@ -21,5 +21,15 @@ RSpec.describe "Login", type: :feature do
     expect(current_path).to eq(root_path)
   end
 
-  
+  it "cannot login with invalid credentials" do
+    click_on "Login"
+
+    fill_in "Email", with: @user.email
+    fill_in "Password", with: "bad password"
+
+    click_on "Login"
+
+    expect(current_path).to eq(login_path)
+    expect(page).to have_content("Sorry, your credentials are bad.")
+  end
 end
