@@ -21,20 +21,30 @@ RSpec.describe "encounters#new", type: :feature do
   
       
       expect(page).to have_button("Create a New Encounter")
-      click_button "Create a New Encounter"
-      expect(current_path).to eq new_encounter_path
       
-      expect(page).to have_content ("Encounter Creation")
-      expect(page).to have_content ("Monster")
+      VCR.use_cassette('encounter_list') do
+        click_button "Create a New Encounter"
+        expect(current_path).to eq new_encounter_path
+        
+        expect(page).to have_content ("Encounter Creation")
+        expect(page).to have_content ("Monster")
 
-      within ".character(1)" do
-        expect(page).to have_content ("Character(1)")
-        expect(page).to have_content ("Class")
-        expect(page).to have_content ("Level")
-        expect(page).to have_content ("Ability Modifiers")
+        within (".character1") do
+          expect(page).to have_content ("Character(1)")
+          expect(page).to have_content ("Class")
+          expect(page).to have_content ("Level")
+          expect(page).to have_content ("Ability Modifiers")
+        end
+
+        within (".character6") do
+          expect(page).to have_content ("Character(6)")
+          expect(page).to have_content ("Class")
+          expect(page).to have_content ("Level")
+          expect(page).to have_content ("Ability Modifiers")
+        end
+
+        # expect(page).to have_content("Add Character")
       end
-
-      expect(page).to have_content("Add Character")
 
     end
   end
