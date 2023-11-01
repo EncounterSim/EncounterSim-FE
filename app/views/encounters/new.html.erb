@@ -1,0 +1,29 @@
+
+<div class="jumbotron text-center">
+<h1>Encounter Creation</h1>
+
+</div>
+
+<div class="container">
+  <h2>Vertical (basic) form</h2>
+  <%= form_with url: encounters_path do |form| %>
+    <div class="form-group search-field">
+      <%= form.label :monster, 'Monster' %><br>
+      <%= select_tag :state, options_for_select(@monsters) %>
+    </div>
+    <div class="form-group">
+      <%= form.label :monster, 'Monster' %><br>
+      <%= form.text_field :email %><br>
+    </div>
+    <div class="form-group">
+      <%= form.label :password, 'Password' %><br>
+      <%= form.password_field :password %><br>
+    </div>
+    <div class="form-group">
+      <%= form.label :password_confirmation, 'Confirm Password' %><br>
+      <%= form.password_field :password_confirmation %><br><br>
+    <div class="btn btn-default">
+      <%= form.submit 'Create User' %>
+    </div>
+  <% end %>
+</div>
