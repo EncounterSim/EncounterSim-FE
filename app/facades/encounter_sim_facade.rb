@@ -1,9 +1,23 @@
 class EncounterSimFacade
   def initialize
-    @service = EncounterSimService
+    @service = EncounterSimService.new
   end
 
-  def #placeholder
-    
+  def monster_list
+    @service.monsters.map do |monster|
+      Monster.new(monster)
+    end
+  end
+
+  def players
+    @services.players.map do |player|
+      Player.new(player)
+    end
+  end
+
+  def spells
+    @services.spells.map do |spell|
+      Spell.new(spell)
+    end
   end
 end
