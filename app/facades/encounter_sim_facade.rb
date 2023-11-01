@@ -4,7 +4,7 @@ class EncounterSimFacade
   end
 
   def monster_list
-    @service.monsters.map do |monster|
+    list = @service.monsters.map do |monster|
       Monster.new(monster)
     end
   end
@@ -18,6 +18,12 @@ class EncounterSimFacade
   def spells
     @services.spells.map do |spell|
       Spell.new(spell)
+    end
+  end
+
+  def monster_names
+    monster_list.map do |monster|
+      monster.name
     end
   end
 end
