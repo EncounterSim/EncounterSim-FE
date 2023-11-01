@@ -25,7 +25,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to root_path
     else
-      flash[:error] = "Sorry, your credentials are bad."
+      flash[:error] = "There was a problem with your credentials, please try again."
       redirect_to login_path
     end
   end
