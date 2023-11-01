@@ -30,6 +30,6 @@ RSpec.describe "Login", type: :feature do
     click_on "Login"
 
     expect(current_path).to eq(login_path)
-    expect(page).to have_content("Sorry, your credentials are bad.")
+    expect(page).to have_content("There was a problem with your credentials, please try again.")
   end
 end
