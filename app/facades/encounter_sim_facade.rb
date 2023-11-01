@@ -9,14 +9,14 @@ class EncounterSimFacade
     end
   end
 
-  def players
-    @services.players.map do |player|
+  def player_list
+    @service.players.map do |player|
       Player.new(player)
     end
   end
 
   def spells
-    @services.spells.map do |spell|
+    @service.spells.map do |spell|
       Spell.new(spell)
     end
   end
@@ -25,5 +25,19 @@ class EncounterSimFacade
     monster_list.map do |monster|
       monster.name
     end
+  end
+  
+  def player_classes
+    player_list.map do |player|
+      player.name
+    end
+  end
+
+  def levels
+    (1..20).to_a
+  end
+
+  def ability_modifiers
+    (-5..5).to_a
   end
 end
