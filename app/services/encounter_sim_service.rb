@@ -1,23 +1,23 @@
 class EncounterSimService
 
-  def encounters
-    get_url("")
+  def spells
+    get_url("/api/v1/spells")[:data]
   end
 
   def monsters
-    get_url("")
+    get_url("/api/v1/monsters")[:data]
   end
 
-  def users
-    get_url("")
+  def players
+    get_url("/api/v1/players")[:data]
   end
 
   def get_url(url)
     response = conn.get(url)
-    JSON.parse(response.body, symbolize_name: true)
+    JSON.parse(response.body, symbolize_names:true)
   end
 
   def conn
-    Faraday.new(url: 'http://localhost:5000')
+    Faraday.new(url: 'http://localhost:3000')
   end
 end
