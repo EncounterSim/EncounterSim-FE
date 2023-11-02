@@ -12,6 +12,9 @@
     <%= form.submit "Login" %>
   <% end %>
 
+  <%= link_to "Login with GitHub",
+  "https://github.com/login/oauth/authorize?client_id=9efeee337b5dd5eeb0dd&scope=repo" %>
+
   <!-- Link to Create Account -->
   <br><p>Don't have an account? <%= link_to "Create Account", new_user_path %></p>
 </div>
