@@ -9,7 +9,7 @@ RSpec.describe "Register", type: :feature do
     describe "I am taken to the '/create_account' page" do
       it "takes me to a form to fill in my email, password and password confirmation" do
 
-        click_link "Create An Account"
+        click_button "Create An Account"
 
         expect(current_path).to eq new_user_path
 
@@ -29,7 +29,7 @@ RSpec.describe "Register", type: :feature do
       end
 
       it "checks to verify that my passwords match" do
-        click_link "Create An Account"
+        click_button "Create An Account"
 
         expect(current_path).to eq new_user_path
 
@@ -48,7 +48,7 @@ RSpec.describe "Register", type: :feature do
       end
 
       it "checks to verify all information is added" do
-        click_link "Create An Account"
+        click_button "Create An Account"
 
         expect(current_path).to eq new_user_path
 

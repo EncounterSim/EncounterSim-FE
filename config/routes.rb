@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   get '/create_account', to: 'users#new', as: 'create_account'
   get '/logout', to: 'users#destroy'
   resources :monsters, only: [:index]
-
+  resources :encounters, only: [:new, :create], path: 'create_encounter'
 end

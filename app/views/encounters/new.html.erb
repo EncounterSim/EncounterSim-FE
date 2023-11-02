@@ -1,0 +1,108 @@
+
+<div class="jumbotron text-center">
+<h1>Encounter Creation</h1>
+
+</div>
+
+<div class="container">
+  <h2>Encounter Details</h2>
+  <%= form_with url: encounters_path do |form| %>
+    <div class="form-group search-field">
+      <%= form.label :monster, 'Monster' %><br>
+      <%= select_tag :monster, options_for_select(@encounter.monster_names) %>
+    </div>
+    <section class="character1"
+    <h3>Character(1)</h3>
+      <div class="form-group">
+        <%= form.label :class_1, 'Class' %><br>
+        <%= select_tag :class_1, options_for_select(@encounter.player_classes) %>
+      </div>
+      <div class="form-group">
+        <%= form.label :level_1, 'Level' %><br>
+        <%= select_tag :level_1, options_for_select(@encounter.levels) %>
+      </div>
+      <div class="form-group">
+        <%= form.label :ability_modifiers_1, 'Ability Modifiers' %><br>
+        <%= select_tag :ability_modifiers_1, options_for_select(@encounter.ability_modifiers) %><br>
+      </div>
+    </section>
+    <section class="character2"
+      <h3>Character(2)</h3>
+      <div class="form-group">
+        <%= form.label :class_2, 'Class' %><br>
+        <%= select_tag :class_2, options_for_select(@encounter.player_classes) %>
+      </div>
+      <div class="form-group">
+        <%= form.label :level_2, 'Level' %><br>
+        <%= select_tag :level_2, options_for_select(@encounter.levels) %>
+      </div>
+      <div class="form-group">
+        <%= form.label :ability_modifiers_2, 'Ability Modifiers' %><br>
+        <%= select_tag :ability_modifiers_2, options_for_select(@encounter.ability_modifiers) %><br>
+      </div>
+    </section>
+    <section class="character3"
+      <h3>Character(3)</h3>
+      <div class="form-group">
+        <%= form.label :class_3, 'Class' %><br>
+        <%= select_tag :class_3, options_for_select(@encounter.player_classes) %>
+      </div>
+      <div class="form-group">
+        <%= form.label :level_3, 'Level' %><br>
+        <%= select_tag :level_3, options_for_select(@encounter.levels) %>
+      </div>
+      <div class="form-group">
+        <%= form.label :ability_modifiers_3, 'Ability Modifiers' %><br>
+        <%= select_tag :ability_modifiers_3, options_for_select(@encounter.ability_modifiers) %><br>
+      </div>
+    </section>
+    <section class="character4"
+      <h3>Character(4)</h3>
+      <div class="form-group">
+        <%= form.label :class_4, 'Class' %><br>
+        <%= select_tag :class_4, options_for_select(@encounter.player_classes) %>
+      </div>
+      <div class="form-group">
+        <%= form.label :level_4, 'Level' %><br>
+        <%= select_tag :level_4, options_for_select(@encounter.levels) %>
+      </div>
+      <div class="form-group">
+        <%= form.label :ability_modifiers_4, 'Ability Modifiers' %><br>
+        <%= select_tag :ability_modifiers_4, options_for_select(@encounter.ability_modifiers) %><br>
+      </div>
+    </section>
+    <section class="character5"
+      <h3>Character(5)</h3>
+      <div class="form-group">
+        <%= form.label :class_5, 'Class' %><br>
+        <%= select_tag :class_5, options_for_select(@encounter.player_classes) %>
+      </div>
+      <div class="form-group">
+        <%= form.label :level_5, 'Level' %><br>
+        <%= select_tag :level_5, options_for_select(@encounter.levels) %>
+      </div>
+      <div class="form-group">
+        <%= form.label :ability_modifiers_5, 'Ability Modifiers' %><br>
+        <%= select_tag :ability_modifiers_5, options_for_select(@encounter.ability_modifiers) %><br>
+      </div>
+    </section>
+    <section class="character6"
+      <h3>Character(6)</h3>
+      <div class="form-group">
+        <%= form.label :class_6, 'Class' %><br>
+        <%= select_tag :class_6, options_for_select(@encounter.player_classes) %>
+      </div>
+      <div class="form-group">
+        <%= form.label :level_6, 'Level' %><br>
+        <%= select_tag :level_6, options_for_select(@encounter.levels) %>
+      </div>
+      <div class="form-group">
+        <%= form.label :ability_modifiers_6, 'Ability Modifiers' %><br>
+        <%= select_tag :ability_modifiers_6, options_for_select(@encounter.ability_modifiers) %><br>
+      </div>
+      <div class="btn btn-default">
+        <%= form.submit 'Create Encounter' %>
+      </div>
+    </section>
+  <% end %>
+</div>

@@ -8,13 +8,13 @@ RSpec.describe "Welcome#index", type: :feature do
   end
   describe "As a user, when I visit '/'" do
     it "I see a link to create an account and another to login" do
-      expect(page).to have_link "Create An Account"
-      expect(page).to have_link "Login"
-      click_link "Create An Account"
+      expect(page).to have_button "Create An Account"
+      expect(page).to have_button "Login"
+      click_button "Create An Account"
       expect(current_path).to eq new_user_path
       
       visit root_path
-      click_link "Login"
+      click_button "Login"
       expect(current_path).to eq login_path
     end
 
