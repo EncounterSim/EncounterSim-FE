@@ -4,7 +4,6 @@ class EncountersController < ApplicationController
   end
 
   def create
-    require 'pry';binding.pry
   end
 
   private
