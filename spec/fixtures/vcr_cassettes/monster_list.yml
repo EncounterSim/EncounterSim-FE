@@ -1,0 +1,227 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/monsters
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"47c3495b03c92a9daa9afc58df5ecac8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - aae466ea-2613-4bdd-8143-4588baa952f0
+      X-Runtime:
+      - '0.374414'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.02, process_action.action_controller;dur=353.92
+      Content-Length:
+      - '36231'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":null,"type":"monster","attributes":{"id":null,"name":"Aboleth","url":"/api/monsters/aboleth"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Acolyte","url":"/api/monsters/acolyte"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Adult
+        Black Dragon","url":"/api/monsters/adult-black-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Adult
+        Blue Dragon","url":"/api/monsters/adult-blue-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Adult
+        Brass Dragon","url":"/api/monsters/adult-brass-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Adult
+        Bronze Dragon","url":"/api/monsters/adult-bronze-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Adult
+        Copper Dragon","url":"/api/monsters/adult-copper-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Adult
+        Gold Dragon","url":"/api/monsters/adult-gold-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Adult
+        Green Dragon","url":"/api/monsters/adult-green-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Adult
+        Red Dragon","url":"/api/monsters/adult-red-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Adult
+        Silver Dragon","url":"/api/monsters/adult-silver-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Adult
+        White Dragon","url":"/api/monsters/adult-white-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Air
+        Elemental","url":"/api/monsters/air-elemental"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ancient
+        Black Dragon","url":"/api/monsters/ancient-black-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ancient
+        Blue Dragon","url":"/api/monsters/ancient-blue-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ancient
+        Brass Dragon","url":"/api/monsters/ancient-brass-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ancient
+        Bronze Dragon","url":"/api/monsters/ancient-bronze-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ancient
+        Copper Dragon","url":"/api/monsters/ancient-copper-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ancient
+        Gold Dragon","url":"/api/monsters/ancient-gold-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ancient
+        Green Dragon","url":"/api/monsters/ancient-green-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ancient
+        Red Dragon","url":"/api/monsters/ancient-red-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ancient
+        Silver Dragon","url":"/api/monsters/ancient-silver-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ancient
+        White Dragon","url":"/api/monsters/ancient-white-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Androsphinx","url":"/api/monsters/androsphinx"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Animated
+        Armor","url":"/api/monsters/animated-armor"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ankheg","url":"/api/monsters/ankheg"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ape","url":"/api/monsters/ape"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Archmage","url":"/api/monsters/archmage"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Assassin","url":"/api/monsters/assassin"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Awakened
+        Shrub","url":"/api/monsters/awakened-shrub"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Awakened
+        Tree","url":"/api/monsters/awakened-tree"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Axe
+        Beak","url":"/api/monsters/axe-beak"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Azer","url":"/api/monsters/azer"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Baboon","url":"/api/monsters/baboon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Badger","url":"/api/monsters/badger"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Balor","url":"/api/monsters/balor"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Bandit","url":"/api/monsters/bandit"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Bandit
+        Captain","url":"/api/monsters/bandit-captain"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Barbed
+        Devil","url":"/api/monsters/barbed-devil"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Basilisk","url":"/api/monsters/basilisk"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Bat","url":"/api/monsters/bat"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Bearded
+        Devil","url":"/api/monsters/bearded-devil"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Behir","url":"/api/monsters/behir"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Berserker","url":"/api/monsters/berserker"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Black
+        Bear","url":"/api/monsters/black-bear"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Black
+        Dragon Wyrmling","url":"/api/monsters/black-dragon-wyrmling"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Black
+        Pudding","url":"/api/monsters/black-pudding"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Blink
+        Dog","url":"/api/monsters/blink-dog"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Blood
+        Hawk","url":"/api/monsters/blood-hawk"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Blue
+        Dragon Wyrmling","url":"/api/monsters/blue-dragon-wyrmling"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Boar","url":"/api/monsters/boar"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Bone
+        Devil","url":"/api/monsters/bone-devil"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Brass
+        Dragon Wyrmling","url":"/api/monsters/brass-dragon-wyrmling"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Bronze
+        Dragon Wyrmling","url":"/api/monsters/bronze-dragon-wyrmling"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Brown
+        Bear","url":"/api/monsters/brown-bear"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Bugbear","url":"/api/monsters/bugbear"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Bulette","url":"/api/monsters/bulette"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Camel","url":"/api/monsters/camel"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Cat","url":"/api/monsters/cat"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Centaur","url":"/api/monsters/centaur"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Chain
+        Devil","url":"/api/monsters/chain-devil"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Chimera","url":"/api/monsters/chimera"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Chuul","url":"/api/monsters/chuul"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Clay
+        Golem","url":"/api/monsters/clay-golem"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Cloaker","url":"/api/monsters/cloaker"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Cloud
+        Giant","url":"/api/monsters/cloud-giant"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Cockatrice","url":"/api/monsters/cockatrice"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Commoner","url":"/api/monsters/commoner"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Constrictor
+        Snake","url":"/api/monsters/constrictor-snake"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Copper
+        Dragon Wyrmling","url":"/api/monsters/copper-dragon-wyrmling"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Couatl","url":"/api/monsters/couatl"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Crab","url":"/api/monsters/crab"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Crocodile","url":"/api/monsters/crocodile"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Cult
+        Fanatic","url":"/api/monsters/cult-fanatic"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Cultist","url":"/api/monsters/cultist"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Darkmantle","url":"/api/monsters/darkmantle"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Death
+        Dog","url":"/api/monsters/death-dog"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Deep
+        Gnome (Svirfneblin)","url":"/api/monsters/deep-gnome-svirfneblin"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Deer","url":"/api/monsters/deer"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Deva","url":"/api/monsters/deva"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Dire
+        Wolf","url":"/api/monsters/dire-wolf"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Djinni","url":"/api/monsters/djinni"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Doppelganger","url":"/api/monsters/doppelganger"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Draft
+        Horse","url":"/api/monsters/draft-horse"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Dragon
+        Turtle","url":"/api/monsters/dragon-turtle"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Dretch","url":"/api/monsters/dretch"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Drider","url":"/api/monsters/drider"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Drow","url":"/api/monsters/drow"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Druid","url":"/api/monsters/druid"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Dryad","url":"/api/monsters/dryad"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Duergar","url":"/api/monsters/duergar"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Dust
+        Mephit","url":"/api/monsters/dust-mephit"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Eagle","url":"/api/monsters/eagle"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Earth
+        Elemental","url":"/api/monsters/earth-elemental"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Efreeti","url":"/api/monsters/efreeti"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Elephant","url":"/api/monsters/elephant"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Elk","url":"/api/monsters/elk"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Erinyes","url":"/api/monsters/erinyes"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ettercap","url":"/api/monsters/ettercap"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ettin","url":"/api/monsters/ettin"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Fire
+        Elemental","url":"/api/monsters/fire-elemental"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Fire
+        Giant","url":"/api/monsters/fire-giant"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Flesh
+        Golem","url":"/api/monsters/flesh-golem"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Flying
+        Snake","url":"/api/monsters/flying-snake"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Flying
+        Sword","url":"/api/monsters/flying-sword"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Frog","url":"/api/monsters/frog"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Frost
+        Giant","url":"/api/monsters/frost-giant"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Gargoyle","url":"/api/monsters/gargoyle"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Gelatinous
+        Cube","url":"/api/monsters/gelatinous-cube"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ghast","url":"/api/monsters/ghast"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ghost","url":"/api/monsters/ghost"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ghoul","url":"/api/monsters/ghoul"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Ape","url":"/api/monsters/giant-ape"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Badger","url":"/api/monsters/giant-badger"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Bat","url":"/api/monsters/giant-bat"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Boar","url":"/api/monsters/giant-boar"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Centipede","url":"/api/monsters/giant-centipede"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Constrictor Snake","url":"/api/monsters/giant-constrictor-snake"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Crab","url":"/api/monsters/giant-crab"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Crocodile","url":"/api/monsters/giant-crocodile"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Eagle","url":"/api/monsters/giant-eagle"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Elk","url":"/api/monsters/giant-elk"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Fire Beetle","url":"/api/monsters/giant-fire-beetle"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Frog","url":"/api/monsters/giant-frog"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Goat","url":"/api/monsters/giant-goat"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Hyena","url":"/api/monsters/giant-hyena"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Lizard","url":"/api/monsters/giant-lizard"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Octopus","url":"/api/monsters/giant-octopus"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Owl","url":"/api/monsters/giant-owl"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Poisonous Snake","url":"/api/monsters/giant-poisonous-snake"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Rat","url":"/api/monsters/giant-rat"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Rat (Diseased)","url":"/api/monsters/giant-rat-diseased"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Scorpion","url":"/api/monsters/giant-scorpion"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Sea Horse","url":"/api/monsters/giant-sea-horse"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Shark","url":"/api/monsters/giant-shark"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Spider","url":"/api/monsters/giant-spider"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Toad","url":"/api/monsters/giant-toad"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Vulture","url":"/api/monsters/giant-vulture"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Wasp","url":"/api/monsters/giant-wasp"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Weasel","url":"/api/monsters/giant-weasel"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Giant
+        Wolf Spider","url":"/api/monsters/giant-wolf-spider"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Gibbering
+        Mouther","url":"/api/monsters/gibbering-mouther"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Glabrezu","url":"/api/monsters/glabrezu"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Gladiator","url":"/api/monsters/gladiator"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Gnoll","url":"/api/monsters/gnoll"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Goat","url":"/api/monsters/goat"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Goblin","url":"/api/monsters/goblin"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Gold
+        Dragon Wyrmling","url":"/api/monsters/gold-dragon-wyrmling"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Gorgon","url":"/api/monsters/gorgon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Gray
+        Ooze","url":"/api/monsters/gray-ooze"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Green
+        Dragon Wyrmling","url":"/api/monsters/green-dragon-wyrmling"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Green
+        Hag","url":"/api/monsters/green-hag"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Grick","url":"/api/monsters/grick"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Griffon","url":"/api/monsters/griffon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Grimlock","url":"/api/monsters/grimlock"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Guard","url":"/api/monsters/guard"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Guardian
+        Naga","url":"/api/monsters/guardian-naga"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Gynosphinx","url":"/api/monsters/gynosphinx"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Half-Red
+        Dragon Veteran","url":"/api/monsters/half-red-dragon-veteran"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Harpy","url":"/api/monsters/harpy"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Hawk","url":"/api/monsters/hawk"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Hell
+        Hound","url":"/api/monsters/hell-hound"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Hezrou","url":"/api/monsters/hezrou"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Hill
+        Giant","url":"/api/monsters/hill-giant"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Hippogriff","url":"/api/monsters/hippogriff"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Hobgoblin","url":"/api/monsters/hobgoblin"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Homunculus","url":"/api/monsters/homunculus"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Horned
+        Devil","url":"/api/monsters/horned-devil"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Hunter
+        Shark","url":"/api/monsters/hunter-shark"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Hydra","url":"/api/monsters/hydra"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Hyena","url":"/api/monsters/hyena"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ice
+        Devil","url":"/api/monsters/ice-devil"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ice
+        Mephit","url":"/api/monsters/ice-mephit"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Imp","url":"/api/monsters/imp"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Invisible
+        Stalker","url":"/api/monsters/invisible-stalker"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Iron
+        Golem","url":"/api/monsters/iron-golem"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Jackal","url":"/api/monsters/jackal"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Killer
+        Whale","url":"/api/monsters/killer-whale"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Knight","url":"/api/monsters/knight"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Kobold","url":"/api/monsters/kobold"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Kraken","url":"/api/monsters/kraken"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Lamia","url":"/api/monsters/lamia"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Lemure","url":"/api/monsters/lemure"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Lich","url":"/api/monsters/lich"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Lion","url":"/api/monsters/lion"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Lizard","url":"/api/monsters/lizard"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Lizardfolk","url":"/api/monsters/lizardfolk"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Mage","url":"/api/monsters/mage"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Magma
+        Mephit","url":"/api/monsters/magma-mephit"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Magmin","url":"/api/monsters/magmin"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Mammoth","url":"/api/monsters/mammoth"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Manticore","url":"/api/monsters/manticore"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Marilith","url":"/api/monsters/marilith"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Mastiff","url":"/api/monsters/mastiff"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Medusa","url":"/api/monsters/medusa"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Merfolk","url":"/api/monsters/merfolk"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Merrow","url":"/api/monsters/merrow"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Mimic","url":"/api/monsters/mimic"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Minotaur","url":"/api/monsters/minotaur"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Minotaur
+        Skeleton","url":"/api/monsters/minotaur-skeleton"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Mule","url":"/api/monsters/mule"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Mummy","url":"/api/monsters/mummy"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Mummy
+        Lord","url":"/api/monsters/mummy-lord"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Nalfeshnee","url":"/api/monsters/nalfeshnee"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Night
+        Hag","url":"/api/monsters/night-hag"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Nightmare","url":"/api/monsters/nightmare"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Noble","url":"/api/monsters/noble"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ochre
+        Jelly","url":"/api/monsters/ochre-jelly"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Octopus","url":"/api/monsters/octopus"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ogre","url":"/api/monsters/ogre"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Ogre
+        Zombie","url":"/api/monsters/ogre-zombie"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Oni","url":"/api/monsters/oni"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Orc","url":"/api/monsters/orc"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Otyugh","url":"/api/monsters/otyugh"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Owl","url":"/api/monsters/owl"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Owlbear","url":"/api/monsters/owlbear"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Panther","url":"/api/monsters/panther"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Pegasus","url":"/api/monsters/pegasus"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Phase
+        Spider","url":"/api/monsters/phase-spider"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Pit
+        Fiend","url":"/api/monsters/pit-fiend"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Planetar","url":"/api/monsters/planetar"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Plesiosaurus","url":"/api/monsters/plesiosaurus"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Poisonous
+        Snake","url":"/api/monsters/poisonous-snake"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Polar
+        Bear","url":"/api/monsters/polar-bear"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Pony","url":"/api/monsters/pony"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Priest","url":"/api/monsters/priest"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Pseudodragon","url":"/api/monsters/pseudodragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Purple
+        Worm","url":"/api/monsters/purple-worm"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Quasit","url":"/api/monsters/quasit"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Quipper","url":"/api/monsters/quipper"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Rakshasa","url":"/api/monsters/rakshasa"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Rat","url":"/api/monsters/rat"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Raven","url":"/api/monsters/raven"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Red
+        Dragon Wyrmling","url":"/api/monsters/red-dragon-wyrmling"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Reef
+        Shark","url":"/api/monsters/reef-shark"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Remorhaz","url":"/api/monsters/remorhaz"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Rhinoceros","url":"/api/monsters/rhinoceros"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Riding
+        Horse","url":"/api/monsters/riding-horse"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Roc","url":"/api/monsters/roc"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Roper","url":"/api/monsters/roper"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Rug
+        of Smothering","url":"/api/monsters/rug-of-smothering"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Rust
+        Monster","url":"/api/monsters/rust-monster"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Saber-Toothed
+        Tiger","url":"/api/monsters/saber-toothed-tiger"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Sahuagin","url":"/api/monsters/sahuagin"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Salamander","url":"/api/monsters/salamander"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Satyr","url":"/api/monsters/satyr"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Scorpion","url":"/api/monsters/scorpion"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Scout","url":"/api/monsters/scout"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Sea
+        Hag","url":"/api/monsters/sea-hag"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Sea
+        Horse","url":"/api/monsters/sea-horse"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Shadow","url":"/api/monsters/shadow"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Shambling
+        Mound","url":"/api/monsters/shambling-mound"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Shield
+        Guardian","url":"/api/monsters/shield-guardian"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Shrieker","url":"/api/monsters/shrieker"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Silver
+        Dragon Wyrmling","url":"/api/monsters/silver-dragon-wyrmling"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Skeleton","url":"/api/monsters/skeleton"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Solar","url":"/api/monsters/solar"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Specter","url":"/api/monsters/specter"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Spider","url":"/api/monsters/spider"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Spirit
+        Naga","url":"/api/monsters/spirit-naga"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Sprite","url":"/api/monsters/sprite"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Spy","url":"/api/monsters/spy"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Steam
+        Mephit","url":"/api/monsters/steam-mephit"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Stirge","url":"/api/monsters/stirge"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Stone
+        Giant","url":"/api/monsters/stone-giant"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Stone
+        Golem","url":"/api/monsters/stone-golem"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Storm
+        Giant","url":"/api/monsters/storm-giant"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Succubus/Incubus","url":"/api/monsters/succubus-incubus"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Swarm
+        of Bats","url":"/api/monsters/swarm-of-bats"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Swarm
+        of Beetles","url":"/api/monsters/swarm-of-beetles"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Swarm
+        of Centipedes","url":"/api/monsters/swarm-of-centipedes"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Swarm
+        of Insects","url":"/api/monsters/swarm-of-insects"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Swarm
+        of Poisonous Snakes","url":"/api/monsters/swarm-of-poisonous-snakes"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Swarm
+        of Quippers","url":"/api/monsters/swarm-of-quippers"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Swarm
+        of Rats","url":"/api/monsters/swarm-of-rats"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Swarm
+        of Ravens","url":"/api/monsters/swarm-of-ravens"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Swarm
+        of Spiders","url":"/api/monsters/swarm-of-spiders"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Swarm
+        of Wasps","url":"/api/monsters/swarm-of-wasps"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Tarrasque","url":"/api/monsters/tarrasque"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Thug","url":"/api/monsters/thug"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Tiger","url":"/api/monsters/tiger"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Treant","url":"/api/monsters/treant"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Tribal
+        Warrior","url":"/api/monsters/tribal-warrior"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Triceratops","url":"/api/monsters/triceratops"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Troll","url":"/api/monsters/troll"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Tyrannosaurus
+        Rex","url":"/api/monsters/tyrannosaurus-rex"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Unicorn","url":"/api/monsters/unicorn"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Vampire,
+        Bat Form","url":"/api/monsters/vampire-bat"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Vampire,
+        Mist Form","url":"/api/monsters/vampire-mist"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Vampire
+        Spawn","url":"/api/monsters/vampire-spawn"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Vampire,
+        Vampire Form","url":"/api/monsters/vampire-vampire"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Veteran","url":"/api/monsters/veteran"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Violet
+        Fungus","url":"/api/monsters/violet-fungus"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Vrock","url":"/api/monsters/vrock"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Vulture","url":"/api/monsters/vulture"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Warhorse","url":"/api/monsters/warhorse"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Warhorse
+        Skeleton","url":"/api/monsters/warhorse-skeleton"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Water
+        Elemental","url":"/api/monsters/water-elemental"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Weasel","url":"/api/monsters/weasel"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Werebear,
+        Bear Form","url":"/api/monsters/werebear-bear"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Werebear,
+        Human Form","url":"/api/monsters/werebear-human"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Werebear,
+        Hybrid Form","url":"/api/monsters/werebear-hybrid"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Wereboar,
+        Boar Form","url":"/api/monsters/wereboar-boar"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Wereboar,
+        Human Form","url":"/api/monsters/wereboar-human"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Wereboar,
+        Hybrid Form","url":"/api/monsters/wereboar-hybrid"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Wererat,
+        Human Form","url":"/api/monsters/wererat-human"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Wererat,
+        Hybrid Form","url":"/api/monsters/wererat-hybrid"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Wererat,
+        Rat Form","url":"/api/monsters/wererat-rat"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Weretiger,
+        Human Form","url":"/api/monsters/weretiger-human"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Weretiger,
+        Hybrid Form","url":"/api/monsters/weretiger-hybrid"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Weretiger,
+        Tiger Form","url":"/api/monsters/weretiger-tiger"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Werewolf,
+        Human Form","url":"/api/monsters/werewolf-human"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Werewolf,
+        Hybrid Form","url":"/api/monsters/werewolf-hybrid"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Werewolf,
+        Wolf Form","url":"/api/monsters/werewolf-wolf"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"White
+        Dragon Wyrmling","url":"/api/monsters/white-dragon-wyrmling"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Wight","url":"/api/monsters/wight"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Will-o''-Wisp","url":"/api/monsters/will-o-wisp"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Winter
+        Wolf","url":"/api/monsters/winter-wolf"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Wolf","url":"/api/monsters/wolf"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Worg","url":"/api/monsters/worg"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Wraith","url":"/api/monsters/wraith"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Wyvern","url":"/api/monsters/wyvern"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Xorn","url":"/api/monsters/xorn"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Young
+        Black Dragon","url":"/api/monsters/young-black-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Young
+        Blue Dragon","url":"/api/monsters/young-blue-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Young
+        Brass Dragon","url":"/api/monsters/young-brass-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Young
+        Bronze Dragon","url":"/api/monsters/young-bronze-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Young
+        Copper Dragon","url":"/api/monsters/young-copper-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Young
+        Gold Dragon","url":"/api/monsters/young-gold-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Young
+        Green Dragon","url":"/api/monsters/young-green-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Young
+        Red Dragon","url":"/api/monsters/young-red-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Young
+        Silver Dragon","url":"/api/monsters/young-silver-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Young
+        White Dragon","url":"/api/monsters/young-white-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Zombie","url":"/api/monsters/zombie"}}]}'
+  recorded_at: Wed, 01 Nov 2023 22:20:47 GMT
+recorded_with: VCR 6.2.0
