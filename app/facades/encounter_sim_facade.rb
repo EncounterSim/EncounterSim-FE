@@ -58,4 +58,9 @@ class EncounterSimFacade
   def damage_die_2
     ['d4','d6','d8', 'd10', 'd12']
   end
+
+  def new_encounter(params)
+    hash = Encounter.new(params).encounter_hash_creation
+    EncounterSimService.new.encounter_creation(hash)
+  end
 end
