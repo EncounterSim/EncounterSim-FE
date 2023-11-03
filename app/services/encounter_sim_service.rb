@@ -18,7 +18,6 @@ class EncounterSimService
       req.headers[:content_type] = 'application/json'
       req.body = JSON.generate(hash_data)
     end
-    require 'pry';binding.pry
     post
   end
 

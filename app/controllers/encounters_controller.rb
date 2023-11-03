@@ -5,7 +5,6 @@ class EncountersController < ApplicationController
 
   def create
     @new_encounter = EncounterSimFacade.new.new_encounter(params)
-    require 'pry';binding.pry
   end
 
   private
