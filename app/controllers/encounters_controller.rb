@@ -1,6 +1,9 @@
 class EncountersController < ApplicationController
   def new
     @encounter = EncounterSimFacade.new
+    @monsters = @encounter.monster_names
+    @spells = @encounter.spell_names
+    @players = @encounter.player_classes
   end
 
   def create
