@@ -3,13 +3,13 @@ require 'rails_helper'
 
 RSpec.describe 'Session timeout', type: :feature do
   it 'expires the session after 15 minutes' do
-    @user = User.create(email: 'user@example.com', password: 'password')
+    @user = User.create(username: 'user@example.com', password: 'password')
 
     visit root_path
 
     click_on 'Login'
 
-    fill_in 'Email', with: @user.email
+    fill_in 'Username', with: @user.username
     fill_in 'Password', with: @user.password
 
     click_on 'Login'

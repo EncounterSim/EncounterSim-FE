@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe "Login", type: :feature do
   before do
-    @user = User.create(email: "user@example.com", password: "password")
+    @user = User.create(username: "user@example.com", password: "password")
   
     visit root_path
   end
@@ -13,7 +13,7 @@ RSpec.describe "Login", type: :feature do
 
     expect(current_path).to eq(login_path)
 
-    fill_in "Email", with: @user.email
+    fill_in "Username", with: @user.username
     fill_in "Password", with: @user.password
 
     click_on "Login"
@@ -24,7 +24,7 @@ RSpec.describe "Login", type: :feature do
   it "cannot login with invalid credentials" do
     click_on "Login"
 
-    fill_in "Email", with: @user.email
+    fill_in "Username", with: @user.username
     fill_in "Password", with: "bad password"
 
     click_on "Login"

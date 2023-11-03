@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "encounters#new", type: :feature do
   before :each do
-    @user = User.create(email: "user@example.com", password: "password")
+    @user = User.create(username: "user", password: "password")
 
     visit root_path
   end
@@ -13,7 +13,7 @@ RSpec.describe "encounters#new", type: :feature do
 
       expect(current_path).to eq(login_path)
   
-      fill_in "Email", with: @user.email
+      fill_in "Username", with: @user.username
       fill_in "Password", with: @user.password
   
       click_on "Login"
