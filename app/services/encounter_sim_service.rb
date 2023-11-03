@@ -16,9 +16,8 @@ class EncounterSimService
 
     post = conn.post "api/v1/encounters" do |req|
       req.headers[:content_type] = 'application/json'
-      req.body = JSON.generate(hash_data)
+      req.body = hash_data.to_json
     end
-    require 'pry';binding.pry
     post
   end
 

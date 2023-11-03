@@ -1,11 +1,13 @@
 class EncountersController < ApplicationController
   def new
     @encounter = EncounterSimFacade.new
+    @monsters = @encounter.monster_names
+    @spells = @encounter.spell_names
+    @players = @encounter.player_classes
   end
 
   def create
     @new_encounter = EncounterSimFacade.new.new_encounter(params)
-    require 'pry';binding.pry
   end
 
   private
