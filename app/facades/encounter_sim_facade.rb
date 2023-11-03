@@ -60,7 +60,10 @@ class EncounterSimFacade
   end
 
   def new_encounter(params)
-    hash = Encounter.new(params).encounter_hash_creation
+    hash = {
+      monster: params[:monster],
+      characters: [params[:char1], params[:char2], params[:char3], params[:char4], params[:char5]]
+    }
     EncounterSimService.new.encounter_creation(hash)
   end
 end
