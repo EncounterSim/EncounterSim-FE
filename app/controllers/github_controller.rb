@@ -1,7 +1,8 @@
 class GithubController < ApplicationController
   def create
-    client_id = '9efeee337b5dd5eeb0dd'
-    client_secret = 'd842a1b70fa4c1e6f039daa6472aafdf7373738d'
+    github_credentials = Rails.application.credentials.github
+    client_id = github_credentials[:client_id]
+    client_secret = github_credentials[:client_secret]
     code = params[:code]
   
     conn = Faraday.new(url: 'https://github.com', headers: {'Accept': 'application/json'})
@@ -25,7 +26,7 @@ class GithubController < ApplicationController
     data = JSON.parse(response.body, symbolize_names: true)
 
     user          = User.find_or_create_by(uid: data[:id])
-    user.email = data[:login]
+    user.username = data[:login]
     user.uid      = data[:id]
     user.token    = access_token
     user.save
