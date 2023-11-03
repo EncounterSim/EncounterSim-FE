@@ -1,0 +1,23 @@
+<div class="jumbotron text-center">
+<h1>List of Monsters</h1>
+</div>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th><center>Monster Name</center></th>
+        <th><center>Link to More API Data</center></th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @monsters.monster_list.each do |monster| %>
+      <tr>
+          <td><center><%= monster.name %></center></td>
+          <td><center><%= link_to "#{monster.name} Data", "https://www.dnd5eapi.co#{monster.url}" %><center></td>
+      </tr>
+        <% end %>
+    </tbody>
+  </table>
+</div>
+

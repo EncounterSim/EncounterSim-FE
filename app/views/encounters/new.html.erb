@@ -1,0 +1,375 @@
+
+
+<div class="jumbotron text-center">
+<h1>Encounter Creation</h1>
+</div>
+
+<div class="container">
+  <h2>Encounter Details</h2>
+  <%= form_with url: encounters_path do |form| %>
+    <div class="form-group search-field">
+      <%= form.label :monster, 'Monster' %>
+      <%= select_tag :monster, options_for_select(@encounter.monster_names) %>
+    </div>
+
+    <section class="character1"
+      <div class="form-inline">
+        <h3>Character (1)</h3>
+        <div class="form-group">
+          <%= form.label :class_1, 'Class' %>
+          <%= select_tag :class_1, options_for_select(@encounter.player_classes) %>
+        </div>
+        <div class="form-group">
+          <%= form.label :level_1, 'Level' %>
+          <%= select_tag :level_1, options_for_select(@encounter.levels) %>
+        </div>
+        <div class="form-inline">
+          <h4>Modifiers</h4>
+          <div class="form-group">
+            <%= form.label :strength_1, 'Strength' %>
+            <%= select_tag :strength_1, options_for_select(@encounter.ability_modifiers) %>
+          </div>
+          <div class="form-group">
+            <%= form.label :dexterity_1, 'Dexterity' %>
+            <%= select_tag :dexterity_1, options_for_select(@encounter.ability_modifiers) %>
+          </div>
+          <div class="form-group">
+            <%= form.label :constitution_1, 'Constitution' %>
+            <%= select_tag :constitution_1, options_for_select(@encounter.ability_modifiers) %>
+          </div>
+          <div class="form-group">
+            <%= form.label :wisdom_1, 'Wisdom' %>
+            <%= select_tag :wisdom_1, options_for_select(@encounter.ability_modifiers) %>
+          </div>
+          <div class="form-group">
+            <%= form.label :charisma_1, 'Charisma' %>
+            <%= select_tag :charisma_1, options_for_select(@encounter.ability_modifiers) %>
+          </div>
+          <div class="form-group">
+            <%= form.label :intelligence_1, 'Intelligence' %>
+            <%= select_tag :intelligence_1, options_for_select(@encounter.ability_modifiers) %>
+          </div>
+          <h4>Spells</h4>
+          <div class="form-group">
+            <%= form.label :spell1_1, 'Spell 1' %>
+            <%= select_tag :spell1_1, options_for_select(@encounter.spell_names) %>
+          </div>
+          <div class="form-group">
+            <%= form.label :spell2_1, 'Spell 2' %>
+            <%= select_tag :spell2_1, options_for_select(@encounter.spell_names) %>
+          </div>
+          <div class="form-group">
+            <%= form.label :spell3_1, 'Spell 3' %>
+            <%= select_tag :spell3_1, options_for_select(@encounter.spell_names) %>
+          </div>
+        </div>
+        <div class="form-inline">
+          <div class="form-group">
+            <%= form.label :hit_points_1, 'Hit Points' %>
+            <%= form.text_field :hit_points_1, type: 'number' %>
+          </div>
+          <div class="form-group">
+            <%= form.label :armor_class_1, 'Armor Class' %>
+            <%= select_tag :armor_class_1, options_for_select(@encounter.armor_class) %>
+          </div>
+          <div class="form-group">
+          <%= form.label :damage_die1_1, 'Base Damage Dice' %>
+          <%= select_tag :damage_die1_1, options_for_select(@encounter.damage_die_1) %>
+          </div>
+          <div class="form-group">
+            <%= form.label :damage_die2_1, '*' %>
+            <%= select_tag :damage_die2_1, options_for_select(@encounter.damage_die_2) %>
+          </div>
+        </div>
+      </section>
+
+    <section class="character2"
+      <div class="form-inline">
+        <h3>Character (2)</h3>
+        <div class="form-group">
+          <%= form.label :class_2, 'Class' %>
+          <%= select_tag :class_2, options_for_select(@encounter.player_classes), {include_blank: true} %>
+        </div>
+        <div class="form-group">
+          <%= form.label :level_2, 'Level' %>
+          <%= select_tag :level_2, options_for_select(@encounter.levels), {include_blank: true} %>
+        </div>
+        <div class="form-inline">
+          <h4>Modifiers</h4>
+          <div class="form-group">
+            <%= form.label :strength_2, 'Strength' %>
+            <%= select_tag :strength_2, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :dexterity_2, 'Dexterity' %>
+            <%= select_tag :dexterity_2, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :constitution_2, 'Constitution' %>
+            <%= select_tag :constitution_2, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :wisdom_2, 'Wisdom' %>
+            <%= select_tag :wisdom_2, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :charisma_2, 'Charisma' %>
+            <%= select_tag :charisma_2, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :intelligence_2, 'Intelligence' %>
+            <%= select_tag :intelligence_2, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <h4>Spells</h4>
+          <div class="form-group">
+            <%= form.label :spell1_2, 'Spell 1' %>
+            <%= select_tag :spell1_2, options_for_select(@encounter.spell_names), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :spell2_2, 'Spell 2' %>
+            <%= select_tag :spell2_2, options_for_select(@encounter.spell_names), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :spell3_2, 'Spell 3' %>
+            <%= select_tag :spell3_2, options_for_select(@encounter.spell_names), {include_blank: true} %>
+          </div>
+        </div>
+        <div class="form-inline">
+          <div class="form-group">
+            <%= form.label :hit_points_2, 'Hit Points' %>
+            <%= form.text_field :hit_points_2, type: 'number' %>
+          </div>
+          <div class="form-group">
+            <%= form.label :armor_class_2, 'Armor Class' %>
+            <%= select_tag :armor_class_2, options_for_select(@encounter.armor_class), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+          <%= form.label :damage_die1_2, 'Base Damage Dice' %>
+          <%= select_tag :damage_die1_2, options_for_select(@encounter.damage_die_1), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :damage_die2_2, '*' %>
+            <%= select_tag :damage_die2_2, options_for_select(@encounter.damage_die_2), {include_blank: true} %>
+          </div>
+        </div>
+      </section>
+
+      <section class="character3"
+      <div class="form-inline">
+        <h3>Character (3)</h3>
+        <div class="form-group">
+          <%= form.label :class_3, 'Class' %>
+          <%= select_tag :class_3, options_for_select(@encounter.player_classes), {include_blank: true} %>
+        </div>
+        <div class="form-group">
+          <%= form.label :level_3, 'Level' %>
+          <%= select_tag :level_3, options_for_select(@encounter.levels), {include_blank: true} %>
+        </div>
+        <div class="form-inline">
+          <h4>Modifiers</h4>
+          <div class="form-group">
+            <%= form.label :strength_3, 'Strength' %>
+            <%= select_tag :strength_3, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :dexterity_3, 'Dexterity' %>
+            <%= select_tag :dexterity_3, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :constitution_3, 'Constitution' %>
+            <%= select_tag :constitution_3, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :wisdom_3, 'Wisdom' %>
+            <%= select_tag :wisdom_3, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :charisma_3, 'Charisma' %>
+            <%= select_tag :charisma_3, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :intelligence_3, 'Intelligence' %>
+            <%= select_tag :intelligence_3, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <h4>Spells</h4>
+          <div class="form-group">
+            <%= form.label :spell1_3, 'Spell 1' %>
+            <%= select_tag :spell1_3, options_for_select(@encounter.spell_names), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :spell2_3, 'Spell 2' %>
+            <%= select_tag :spell2_3, options_for_select(@encounter.spell_names), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :spell3_3, 'Spell 3' %>
+            <%= select_tag :spell3_3, options_for_select(@encounter.spell_names), {include_blank: true} %>
+          </div>
+        </div>
+        <div class="form-inline">
+          <div class="form-group">
+            <%= form.label :hit_points_3, 'Hit Points' %>
+            <%= form.text_field :hit_points_3, type: 'number' %>
+          </div>
+          <div class="form-group">
+            <%= form.label :armor_class_3, 'Armor Class' %>
+            <%= select_tag :armor_class_3, options_for_select(@encounter.armor_class), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+          <%= form.label :damage_die1_3, 'Base Damage Dice' %>
+          <%= select_tag :damage_die1_3, options_for_select(@encounter.damage_die_1), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :damage_die2_3, '*' %>
+            <%= select_tag :damage_die2_3, options_for_select(@encounter.damage_die_2), {include_blank: true} %>
+          </div>
+        </div>
+      </section>
+
+      <section class="character4"
+      <div class="form-inline">
+        <h3>Character (4)</h3>
+        <div class="form-group">
+          <%= form.label :class_4, 'Class' %>
+          <%= select_tag :class_4, options_for_select(@encounter.player_classes), {include_blank: true} %>
+        </div>
+        <div class="form-group">
+          <%= form.label :level_4, 'Level' %>
+          <%= select_tag :level_4, options_for_select(@encounter.levels), {include_blank: true} %>
+        </div>
+        <div class="form-inline">
+          <h4>Modifiers</h4>
+          <div class="form-group">
+            <%= form.label :strength_4, 'Strength' %>
+            <%= select_tag :strength_4, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :dexterity_4, 'Dexterity' %>
+            <%= select_tag :dexterity_4, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :constitution_4, 'Constitution' %>
+            <%= select_tag :constitution_4, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :wisdom_4, 'Wisdom' %>
+            <%= select_tag :wisdom_4, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :charisma_4, 'Charisma' %>
+            <%= select_tag :charisma_4, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :intelligence_4, 'Intelligence' %>
+            <%= select_tag :intelligence_4, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <h4>Spells</h4>
+          <div class="form-group">
+            <%= form.label :spell1_4, 'Spell 1' %>
+            <%= select_tag :spell1_4, options_for_select(@encounter.spell_names, {include_blank: true}), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :spell2_4, 'Spell 2' %>
+            <%= select_tag :spell2_4, options_for_select(@encounter.spell_names), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :spell3_4, 'Spell 3' %>
+            <%= select_tag :spell3_4, options_for_select(@encounter.spell_names), {include_blank: true} %>
+          </div>
+        </div>
+        <div class="form-inline">
+          <div class="form-group">
+            <%= form.label :hit_points_4, 'Hit Points' %>
+            <%= form.text_field :hit_points_4, type: 'number' %>
+          </div>
+          <div class="form-group">
+            <%= form.label :armor_class_4, 'Armor Class' %>
+            <%= select_tag :armor_class_4, options_for_select(@encounter.armor_class), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+          <%= form.label :damage_die1_4, 'Base Damage Dice' %>
+          <%= select_tag :damage_die1_4, options_for_select(@encounter.damage_die_1), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :damage_die2_4, '*' %>
+            <%= select_tag :damage_die2_4, options_for_select(@encounter.damage_die_2), {include_blank: true} %>
+          </div>
+        </div>
+      </section>
+
+      <section class="character5"
+      <div class="form-inline">
+        <h3>Character (5)</h3>
+        <div class="form-group">
+          <%= form.label :class_5, 'Class' %>
+          <%= select_tag :class_5, options_for_select(@encounter.player_classes), {include_blank: true} %>
+        </div>
+        <div class="form-group">
+          <%= form.label :level_5, 'Level' %>
+          <%= select_tag :level_5, options_for_select(@encounter.levels), {include_blank: true} %>
+        </div>
+        <div class="form-inline">
+          <h4>Modifiers</h4>
+          <div class="form-group">
+            <%= form.label :strength_5, 'Strength' %>
+            <%= select_tag :strength_5, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :dexterity_5, 'Dexterity' %>
+            <%= select_tag :dexterity_5, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :constitution_5, 'Constitution' %>
+            <%= select_tag :constitution_5, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :wisdom_5, 'Wisdom' %>
+            <%= select_tag :wisdom_5, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :charisma_5, 'Charisma' %>
+            <%= select_tag :charisma_5, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :intelligence_5, 'Intelligence' %>
+            <%= select_tag :intelligence_5, options_for_select(@encounter.ability_modifiers), {include_blank: true} %>
+          </div>
+          <h4>Spells</h4>
+          <div class="form-group">
+            <%= form.label :spell1_5, 'Spell 1' %>
+            <%= select_tag :spell1_5, options_for_select(@encounter.spell_names), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :spell2_5, 'Spell 2' %>
+            <%= select_tag :spell2_5, options_for_select(@encounter.spell_names), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :spell3_5, 'Spell 3' %>
+            <%= select_tag :spell3_5, options_for_select(@encounter.spell_names), {include_blank: true} %>
+          </div>
+        </div>
+        <div class="form-inline">
+          <div class="form-group">
+            <%= form.label :hit_points_5, 'Hit Points' %>
+            <%= form.text_field :hit_points_5, type: 'number' %>
+          </div>
+          <div class="form-group">
+            <%= form.label :armor_class_5, 'Armor Class' %>
+            <%= select_tag :armor_class_5, options_for_select(@encounter.armor_class), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+          <%= form.label :damage_die1_5, 'Base Damage Dice' %>
+          <%= select_tag :damage_die1_5, options_for_select(@encounter.damage_die_1), {include_blank: true} %>
+          </div>
+          <div class="form-group">
+            <%= form.label :damage_die2_5, '*' %>
+            <%= select_tag :damage_die2_5, options_for_select(@encounter.damage_die_2), {include_blank: true} %><br><br>
+          </div>
+        </div>
+      </section>
+
+    <div class="btn btn-default">
+      <strong><%= form.submit 'Create Encounter' %></strong>
+    </div>
+
+  <% end %>
+</div>
