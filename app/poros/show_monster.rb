@@ -1,7 +1,7 @@
 class ShowMonster
   attr_reader :name, :armor_class, :hit_points, :damage_dice,
               :strength, :dexterity, :constitution, :intelligence,
-              :wisdom, :charisma, :attacks, :id
+              :wisdom, :charisma, :attacks, :id, :image
 
   def initialize(data)
     @id = nil
@@ -16,5 +16,6 @@ class ShowMonster
     @charisma = data[:charisma]
 
     @attacks = data[:attacks]
+    @image = data[:image]
   end
 end

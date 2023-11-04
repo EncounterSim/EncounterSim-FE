@@ -1,6 +1,12 @@
 <div class="jumbotron text-center">
   <h1><%= @monster.name %></h1>
 </div>
+<% if @monster.image != nil %>
+  <div class="text-center">
+    <image src="https://www.dnd5eapi.co<%= @monster.image %>" alt="No Picture Available"></image>
+  </div>
+<% end %>
+
 
 <table class="table">
   <thead>
