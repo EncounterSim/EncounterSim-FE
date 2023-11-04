@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   post "/login", to: "users#login"
   get '/create_account', to: 'users#new', as: 'create_account'
   get '/logout', to: 'users#destroy'
-  resources :monsters, only: [:index]
+  resources :monsters, only: [:index, :show]
   resources :encounters, only: [:new, :create], path: 'create_encounter'
 end
