@@ -15,9 +15,20 @@ class EncounterSimFacade
     end
   end
 
-  def spells
+  def spell_list
     @service.spells.map do |spell|
       Spell.new(spell)
+    end
+  end
+
+  def monster(monster_index)
+    monster = @service.monster(monster_index)[:data][:attributes]
+    ShowMonster.new(monster)
+  end
+
+  def spell_names
+    list = spell_list.map do |spell|
+      spell.name
     end
   end
 
@@ -39,5 +50,26 @@ class EncounterSimFacade
 
   def ability_modifiers
     (-5..5).to_a
+  end
+
+  def armor_class
+    (10..30).to_a
+  end
+
+  def damage_die_1
+    (1..4).to_a
+  end
+
+  def damage_die_2
+    ['d4','d6','d8', 'd10', 'd12']
+  end
+
+  def new_encounter(params)
+    hash = {
+      user_id: params[:id],
+      monster: params[:monster],
+      characters: [params[:char1], params[:char2], params[:char3], params[:char4], params[:char5]]
+    }
+    EncounterSimService.new.encounter_creation(hash)
   end
 end
