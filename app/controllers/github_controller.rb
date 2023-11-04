@@ -1,37 +1,16 @@
 class GithubController < ApplicationController
   def create
-    github_credentials = Rails.application.credentials.github
-    client_id = github_credentials[:client_id]
-    client_secret = github_credentials[:client_secret]
-    code = params[:code]
-  
-    conn = Faraday.new(url: 'https://github.com', headers: {'Accept': 'application/json'})
-  
-    response = conn.post('/login/oauth/access_token') do |req|
-      req.params['code'] = code
-      req.params['client_id'] = client_id
-      req.params['client_secret'] = client_secret
-    end
-    data = JSON.parse(response.body, symbolize_names: true)
-    access_token = data[:access_token]
-    
-    conn = Faraday.new(
-      url: 'https://api.github.com',
-      headers: {
-        'Authorization': "token #{access_token}"
-      }
-      )
-      response = conn.get('/user')
-      data = JSON.parse(response.body, symbolize_names: true)
+    access_token = GithubFacade.new.access_token(params)
+    github_facade = GithubFacade.new.github_user(access_token)
       
-      user          = User.find_or_create_by(uid: data[:id])
-      user.username = data[:login]
-      user.uid      = data[:id]
+      user          = User.find_or_create_by(uid: github_facade[:id])
+      user.username = github_facade[:login]
+      user.uid      = github_facade[:id]
       user.token    = access_token
-      user.password = "#{data[:id]}#{data[:login]}"
+      user.password = "#{github_facade[:id]}#{github_facade[:login]}"
       user.save
-      session[:user_id] = user.id
-      flash[:success] = "You've successfully created your account #{user.username}, welcome!"
+    session[:user_id] = user.id
+    flash[:success] = "You've successfully created your account #{user.username}, welcome!"
 
     redirect_to root_path
   end
