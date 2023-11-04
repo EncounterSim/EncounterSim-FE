@@ -21,6 +21,11 @@ class EncounterSimFacade
     end
   end
 
+  def monster(monster_index)
+    monster = @service.monster(monster_index)[:data][:attributes]
+    ShowMonster.new(monster)
+  end
+
   def spell_names
     list = spell_list.map do |spell|
       spell.name
