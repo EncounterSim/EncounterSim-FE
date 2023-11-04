@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     new_user = User.new(user_params)
     if new_user.save
-      flash[:success] = "You've successfully created your account with #{new_user.email}, welcome!"
+      flash[:success] = "You've successfully created your account #{new_user.username}, welcome!"
       session[:user_id] = new_user.id
       redirect_to root_path
     else
@@ -19,9 +19,9 @@ class UsersController < ApplicationController
   end
 
   def login
-    user = User.find_by(email: params[:email])
+    user = User.find_by(username: params[:username])
     if user&.authenticate(params[:password])
-      flash[:success] = "Welcome, #{user.email}!"
+      flash[:success] = "Welcome, #{user.username}!"
       session[:user_id] = user.id
       redirect_to root_path
     else
@@ -32,7 +32,6 @@ class UsersController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-
     flash[:notice] = "Logged out successfully."
     redirect_to root_path
   end
@@ -40,6 +39,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:username, :password, :password_confirmation)
   end
 end
