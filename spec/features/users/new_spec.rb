@@ -13,19 +13,19 @@ RSpec.describe "Register", type: :feature do
 
         expect(current_path).to eq new_user_path
 
-        expect(page).to have_content('Email')
+        expect(page).to have_content('Username')
         expect(page).to have_content('Password')
         expect(page).to have_button('Create User')
 
-        fill_in :Email, with: 'test@gmail.com'
+        fill_in "Username", with: 'test@gmail.com'
         fill_in "Password", with: '1234'
         fill_in "Confirm Password", with: '1234'
 
         click_button 'Create User'
 
-        user = User.find_by(email: 'test@gmail.com')
+        user = User.find_by(username: 'test@gmail.com')
         expect(current_path).to eq root_path
-        expect(page).to have_content("You've successfully created your account with test@gmail.com, welcome!")
+        expect(page).to have_content("You've successfully created your account test@gmail.com, welcome!")
       end
 
       it "checks to verify that my passwords match" do
@@ -33,11 +33,11 @@ RSpec.describe "Register", type: :feature do
 
         expect(current_path).to eq new_user_path
 
-        expect(page).to have_content('Email')
+        expect(page).to have_content('Username')
         expect(page).to have_content('Password')
         expect(page).to have_button('Create User')
 
-        fill_in :Email, with: 'test@gmail.com'
+        fill_in "Username", with: 'test@gmail.com'
         fill_in "Password", with: '1234'
         fill_in "Confirm Password", with: 'NOMATCH'
 
@@ -52,7 +52,7 @@ RSpec.describe "Register", type: :feature do
 
         expect(current_path).to eq new_user_path
 
-        expect(page).to have_content('Email')
+        expect(page).to have_content('Username')
         expect(page).to have_content('Password')
         expect(page).to have_button('Create User')
 

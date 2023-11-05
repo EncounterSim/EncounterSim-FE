@@ -7,6 +7,7 @@ class EncountersController < ApplicationController
   end
 
   def create
+    params[:id] = session[:user_id]
     @new_encounter = EncounterSimFacade.new.new_encounter(params)
   end
 

@@ -12,6 +12,10 @@ class EncounterSimService
     get_url("/api/v1/players")[:data]
   end
 
+  def monster(monster_index)
+    get_url("/api/v1/monsters/#{monster_index}")
+  end
+
   def encounter_creation(hash_data)
 
     post = conn.post "api/v1/encounters" do |req|

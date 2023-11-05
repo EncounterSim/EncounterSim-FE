@@ -21,6 +21,11 @@ class EncounterSimFacade
     end
   end
 
+  def monster(monster_index)
+    monster = @service.monster(monster_index)[:data][:attributes]
+    ShowMonster.new(monster)
+  end
+
   def spell_names
     list = spell_list.map do |spell|
       spell.name
@@ -61,6 +66,7 @@ class EncounterSimFacade
 
   def new_encounter(params)
     hash = {
+      user_id: params[:id],
       monster: params[:monster],
       characters: [params[:char1], params[:char2], params[:char3], params[:char4], params[:char5]]
     }

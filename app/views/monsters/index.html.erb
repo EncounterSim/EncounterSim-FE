@@ -14,7 +14,7 @@
     <% @monsters.monster_list.each do |monster| %>
       <tr>
           <td><center><%= monster.name %></center></td>
-          <td><center><%= link_to "#{monster.name} Data", "https://www.dnd5eapi.co#{monster.url}" %><center></td>
+          <td><center><%= link_to "#{monster.name} Data", "monsters/#{monster.index}" %><center></td>
       </tr>
         <% end %>
     </tbody>
