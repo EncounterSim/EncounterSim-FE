@@ -6,11 +6,15 @@
   <thead>
     <th scope="col">Total Wins</th>
     <th scope="col">Total Losses</th>
+    <th scope="col">Total Rounds</th>
+    <th scope="col">Win Percentage</th>
   </thead>
   <tbody>
     <tr>
       <td><%= @encounter.total_wins %></td>
       <td><%= @encounter.total_losses %></td>
+      <td><%= @encounter.total_rounds %></td>
+      <td><%= @encounter.win_percentage * 100 %>%</td>
     </tr>
   </tbody>
 </table>
