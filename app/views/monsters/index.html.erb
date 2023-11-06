@@ -11,7 +11,7 @@
       </tr>
     </thead>
     <tbody>
-    <% @monsters.monster_list.each do |monster| %>
+    <% @monsters.each do |monster| %>
       <tr>
           <td><center><%= monster.name %></center></td>
           <td><center><%= link_to "#{monster.name} Data", "monsters/#{monster.index}" %><center></td>
@@ -20,4 +20,10 @@
     </tbody>
   </table>
 </div>
+
+<div class="text-center">
+
+<%= paginate @monsters %>
+</div>
+
 
