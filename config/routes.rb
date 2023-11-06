@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :monsters, only: [:index, :show]
 
   resources :encounters, only: [:new, :create], path: 'create_encounter'
+  resources :encounters, only: [:show]
 end
