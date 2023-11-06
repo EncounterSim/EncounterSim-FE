@@ -19,16 +19,28 @@ class UsersController < ApplicationController
   end
 
   def login
-    user = User.find_by(email: params[:email])
-    if user
-      user.update!(login_token: SecureRandom.urlsafe_base64, login_token_valid_until: Time.now + 60.minutes)
-      url = "http://localhost:5000/sessions/create?login_token=#{user.login_token}"
-      LoginMailer.send_email(user, url).deliver_later
-      flash[:success] = "Please check your email for login link."
-      redirect_to root_path
+    if params.values.include?("Get a Magic Link")
+      user = User.find_by(email: params[:pemail])
+      if user
+        user.update_columns(login_token: SecureRandom.urlsafe_base64, login_token_valid_until: Time.now + 60.minutes)
+        url = "http://localhost:5000/sessions/create?login_token=#{user.login_token}"
+        LoginMailer.send_email(user, url).deliver_later
+        flash[:success] = "Please check your email for login link."
+        redirect_to root_path
+      else
+        flash[:error] = "Email is not associated with an account, please create an account or add another email."
+        redirect_to login_path
+      end
     else
-      flash[:error] = "Email is not associated with an account, please create an account or add another email."
-      redirect_to login_path
+      user = User.find_by(email: params[:email])
+      if user&.authenticate(params[:password])
+        flash[:success] = "Welcome, #{user.username}!"
+        session[:user_id] = user.id
+        redirect_to root_path
+      else
+        flash[:error] = "There was a problem with your credentials, please try again."
+        redirect_to login_path
+      end
     end
   end
 
@@ -41,6 +53,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :username)
+    params.require(:user).permit(:email, :username, :password, :password_confirmation)
   end
 end
