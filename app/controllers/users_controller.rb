@@ -19,14 +19,26 @@ class UsersController < ApplicationController
   end
 
   def login
-    user = User.find_by(username: params[:username])
-    if user&.authenticate(params[:password])
-      flash[:success] = "Welcome, #{user.username}!"
-      session[:user_id] = user.id
-      redirect_to root_path
+    if params.values.include?("Get a Magic Link")
+      user = User.find_by(email: params[:pemail])
+      if user
+        UserFacade.new.update_and_send_magic_link(user)
+        flash[:success] = "Please check your email for login link."
+        redirect_to root_path
+      else
+        flash[:error] = "Email is not associated with an account, please create an account or add another email."
+        redirect_to login_path
+      end
     else
-      flash[:error] = "There was a problem with your credentials, please try again."
-      redirect_to login_path
+      user = User.find_by(email: params[:email])
+      if user&.authenticate(params[:password])
+        flash[:success] = "Welcome, #{user.username}!"
+        session[:user_id] = user.id
+        redirect_to root_path
+      else
+        flash[:error] = "There was a problem with your credentials, please try again."
+        redirect_to login_path
+      end
     end
   end
 
@@ -39,6 +51,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :password_confirmation)
+    params.require(:user).permit(:email, :username, :password, :password_confirmation)
   end
 end
