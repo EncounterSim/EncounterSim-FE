@@ -120,6 +120,18 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     jwt (2.7.1)
+    kaminari (1.2.2)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.2)
+      kaminari-activerecord (= 1.2.2)
+      kaminari-core (= 1.2.2)
+    kaminari-actionview (1.2.2)
+      actionview
+      kaminari-core (= 1.2.2)
+    kaminari-activerecord (1.2.2)
+      activerecord
+      kaminari-core (= 1.2.2)
+    kaminari-core (1.2.2)
     launchy (2.5.2)
       addressable (~> 2.8)
     loofah (2.21.4)
@@ -165,6 +177,7 @@ GEM
     orderly (0.1.1)
       capybara (>= 1.1)
       rspec (>= 2.14)
+    pagy (6.1.0)
     pg (1.5.4)
     pry (0.14.2)
       coderay (~> 1.1)
@@ -299,8 +312,10 @@ DEPENDENCIES
   faraday
   importmap-rails
   jbuilder
+  kaminari
   launchy
   orderly
+  pagy
   pg (~> 1.1)
   pry
   puma (~> 5.0)
