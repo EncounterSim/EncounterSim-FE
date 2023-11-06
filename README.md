@@ -19,6 +19,7 @@ Designed for use with EncounterSim-BE.
 <li>Faraday<br></li>
 <li>BCrypt<br></li>
 <li>Rails (7.1.1)</li>
+<li>Mailcatcher
 </ul>
 
 ## Database Initialization
