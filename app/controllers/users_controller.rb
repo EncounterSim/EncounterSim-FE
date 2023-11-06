@@ -22,9 +22,7 @@ class UsersController < ApplicationController
     if params.values.include?("Get a Magic Link")
       user = User.find_by(email: params[:pemail])
       if user
-        user.update_columns(login_token: SecureRandom.urlsafe_base64, login_token_valid_until: Time.now + 60.minutes)
-        url = "http://localhost:5000/sessions/create?login_token=#{user.login_token}"
-        LoginMailer.send_email(user, url).deliver_later
+        UserFacade.new.update_and_send_magic_link(user)
         flash[:success] = "Please check your email for login link."
         redirect_to root_path
       else
