@@ -19,7 +19,7 @@ RSpec.describe User, type: :model do
   describe "class methods" do
     describe "#find_user_for_magic_link" do
       it "should find a user if they have a current login token that is less than 60 minutes old" do
-        user = User.create(username: "jojo", email: "jojo@gmail.com", login_token: "123453461454", login_token_valid_until: Time.now + 60.minutes)
+        user = User.create(username: "jojo", email: "jojo@gmail.com", password: "3123434", login_token: "123453461454", login_token_valid_until: Time.now + 60.minutes)
         params = {
           login_token: "123453461454"
         }

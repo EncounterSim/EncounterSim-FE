@@ -3,9 +3,34 @@ require 'rails_helper'
 
 RSpec.describe "Login", type: :feature do
   before do
-    @user = User.create!(email: "test@gmail.com", username: "user")
+    @user = User.create(email: "user@gmail.com", username: "123465", password: "password")
   
     visit root_path
+  end
+
+  it 'can login with valid credentials' do
+    click_on "Login"
+
+    expect(current_path).to eq(login_path)
+
+    fill_in :email, with: @user.email
+    fill_in "Password", with: @user.password
+
+    click_on "Login"
+
+    expect(current_path).to eq(root_path)
+  end
+
+it "cannot login with invalid credentials" do
+    click_on "Login"
+
+    fill_in :email, with: @user.email
+    fill_in "Password", with: "bad password"
+
+    click_on "Login"
+
+    expect(current_path).to eq(login_path)
+    expect(page).to have_content("There was a problem with your credentials, please try again.")
   end
   
   it 'can login with valid credentials using magic link' do
@@ -13,11 +38,14 @@ RSpec.describe "Login", type: :feature do
     expect(current_path).to eq(login_path)
 
     expect(page).to have_content("Login")
-    expect(page).to have_content("Please enter your email for login link.")
-    expect(page).to have_content("Have a Github Account? Login with Github")
-    expect(page).to have_content("Don't have an account? Create Account")
+    expect(page).to have_content("Three ways to login!")
+    expect(page).to have_content("Standard Login:")
+    expect(page).to have_content("Please enter your email and password to login.")
+    expect(page).to have_content("Passwordless Login:")
+    expect(page).to have_content("Please enter your email, login link will be emailed.")
+    expect(page).to have_content("Github Login:")
 
-    fill_in "Email", with: @user.email
+    fill_in :pemail, with: @user.email
 
     click_on "Get a Magic Link"
     user = User.find_by(email: @user.email)
@@ -37,7 +65,7 @@ RSpec.describe "Login", type: :feature do
   it "cannot login without a valid email" do
     click_on "Login"
 
-    fill_in "Email", with: "NOMATCH@gmail.com"
+    fill_in :email, with: "NOMATCH@gmail.com"
 
     click_on "Get a Magic Link"
 
@@ -48,7 +76,7 @@ RSpec.describe "Login", type: :feature do
   it "cannot login with magic link after expired" do
     click_on "Login"
 
-    fill_in "Email", with: @user.email
+    fill_in :pemail, with: @user.email
 
     click_on "Get a Magic Link"
     user = User.find_by(email: @user.email)

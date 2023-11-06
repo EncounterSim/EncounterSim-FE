@@ -20,6 +20,8 @@ RSpec.describe "Register", type: :feature do
 
         fill_in "Email", with: 'test@gmail.com'
         fill_in "Username", with: 'Test'
+        fill_in "Password", with: '1243'
+        fill_in "Confirm Password", with: '1243'
 
         click_button 'Create User'
 
@@ -28,24 +30,25 @@ RSpec.describe "Register", type: :feature do
         expect(page).to have_content("You've successfully created your account Test, welcome!")
       end
 
-      # it "checks to verify that my passwords match" do #taken out due to no longer having password fields
-      #   click_button "Create An Account"
+      it "checks to verify that my passwords match" do #taken out due to no longer having password fields
+        click_button "Create An Account"
 
-      #   expect(current_path).to eq new_user_path
+        expect(current_path).to eq new_user_path
 
-      #   expect(page).to have_content('Username')
-      #   expect(page).to have_content('Password')
-      #   expect(page).to have_button('Create User')
+        expect(page).to have_content('Username')
+        expect(page).to have_content('Password')
+        expect(page).to have_button('Create User')
+        
+        fill_in "Email", with: 'test@gmail.com'
+        fill_in "Username", with: 'test@gmail.com'
+        fill_in "Password", with: '1234'
+        fill_in "Confirm Password", with: 'NOMATCH'
 
-      #   fill_in "Username", with: 'test@gmail.com'
-      #   fill_in "Password", with: '1234'
-      #   fill_in "Confirm Password", with: 'NOMATCH'
+        click_button 'Create User'
 
-      #   click_button 'Create User'
-
-      #   expect(current_path).to eq new_user_path
-      #   expect(page).to have_content("There was an issue creating your account, please try again")
-      # end
+        expect(current_path).to eq new_user_path
+        expect(page).to have_content("There was an issue creating your account, please try again")
+      end
 
       it "checks to verify all information is added" do
         click_button "Create An Account"

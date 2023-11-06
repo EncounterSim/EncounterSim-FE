@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "encounters#new", type: :feature do
   before :each do
-    @user = User.create(email: "user@gmail.com", username: "123465")
+    @user = User.create(email: "user@gmail.com", username: "123465", password: "password")
 
     visit root_path
   end
@@ -13,8 +13,7 @@ RSpec.describe "encounters#new", type: :feature do
 
       expect(current_path).to eq(login_path)
   
-      fill_in "Email", with: @user.email
-
+      fill_in :pemail, with: @user.email
       click_on "Get a Magic Link"
       user = User.find_by(email: @user.email)
       visit "/sessions/create?login_token=#{user.login_token}"

@@ -1,6 +1,6 @@
 RSpec.describe "Login", type: :feature do
   before do
-    @user = User.create(email: "user@gmail.com", username: "1234")
+    @user = User.create(email: "user@gmail.com", username: "123465", password: "password")
   
     visit root_path
   end
@@ -10,7 +10,7 @@ RSpec.describe "Login", type: :feature do
 
     expect(current_path).to eq(login_path)
 
-    fill_in "Email", with: @user.email
+    fill_in :pemail, with: @user.email
 
     click_on "Get a Magic Link"
     user = User.find_by(email: @user.email)
