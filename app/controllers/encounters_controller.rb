@@ -17,8 +17,7 @@ class EncountersController < ApplicationController
   end
 
   def index
-    # @encounters = EncounterSimFacade.new.encounters(session[:user_id])
-    @encounters = [1,2]
+    @encounters = EncounterSimFacade.new.encounters(session[:user_id])
   end
 
   private

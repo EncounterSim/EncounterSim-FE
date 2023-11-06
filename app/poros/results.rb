@@ -17,11 +17,11 @@ class Results
     @p4_stats = data[:p4_stats] if data[:p4_stats]
     @p5_stats = data[:p5_stats] if data[:p5_stats]
     
-    @p1_dmg_per_combat = data[:damage_per_combat][:p1][:total_damage].values.sum
-    @p2_dmg_per_combat = data[:damage_per_combat][:p2][:total_damage].values.sum
-    @p3_dmg_per_combat = data[:damage_per_combat][:p3][:total_damage].values.sum
-    @p4_dmg_per_combat = data[:damage_per_combat][:p4][:total_damage].values.sum
-    @p5_dmg_per_combat = data[:damage_per_combat][:p5][:total_damage].values.sum
+    @p1_dmg_per_combat = data[:damage_per_combat][:p1][:total_damage].values.sum { |val| val.to_i }
+    @p2_dmg_per_combat = data[:damage_per_combat][:p2][:total_damage].values.sum { |val| val.to_i }
+    @p3_dmg_per_combat = data[:damage_per_combat][:p3][:total_damage].values.sum { |val| val.to_i }
+    @p4_dmg_per_combat = data[:damage_per_combat][:p4][:total_damage].values.sum { |val| val.to_i }
+    @p5_dmg_per_combat = data[:damage_per_combat][:p5][:total_damage].values.sum { |val| val.to_i }
 
     @monster_avg_dmg = data[:monster_stats][:avg_dmg]
     @monster_hit_rate = data[:monster_stats][:hit_rate]

@@ -21,7 +21,7 @@ class EncounterSimService
   end
 
   def encounters(id)
-    get_url("/api/v1/encounters?user=#{id}")
+    get_url("/api/v1/encounters?user_id=#{id}")
   end
 
   def encounter_creation(hash_data)
