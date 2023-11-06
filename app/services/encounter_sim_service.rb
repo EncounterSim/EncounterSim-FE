@@ -31,6 +31,6 @@ class EncounterSimService
   end
 
   def conn
-    Faraday.new(url: 'http://localhost:3000')
+    Faraday.new(url: 'https://encountersim-be-78e8d38428a7.herokuapp.com/')
   end
 end
