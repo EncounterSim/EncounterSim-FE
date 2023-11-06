@@ -13,22 +13,24 @@ RSpec.describe "Register", type: :feature do
 
         expect(current_path).to eq new_user_path
 
-        expect(page).to have_content('Username')
-        expect(page).to have_content('Password')
+        expect(page).to have_content('Please create an account using Email and Username or Log in with Github Below')
+        expect(page).to have_content('Email')
         expect(page).to have_button('Create User')
+        expect(page).to have_content('Have a Github Account? Login with Github')
 
-        fill_in "Username", with: 'test@gmail.com'
-        fill_in "Password", with: '1234'
-        fill_in "Confirm Password", with: '1234'
+        fill_in "Email", with: 'test@gmail.com'
+        fill_in "Username", with: 'Test'
+        fill_in "Password", with: '1243'
+        fill_in "Confirm Password", with: '1243'
 
         click_button 'Create User'
 
-        user = User.find_by(username: 'test@gmail.com')
+        user = User.find_by(email: 'test@gmail.com')
         expect(current_path).to eq root_path
-        expect(page).to have_content("You've successfully created your account test@gmail.com, welcome!")
+        expect(page).to have_content("You've successfully created your account Test, welcome!")
       end
 
-      it "checks to verify that my passwords match" do
+      it "checks to verify that my passwords match" do #taken out due to no longer having password fields
         click_button "Create An Account"
 
         expect(current_path).to eq new_user_path
@@ -36,7 +38,8 @@ RSpec.describe "Register", type: :feature do
         expect(page).to have_content('Username')
         expect(page).to have_content('Password')
         expect(page).to have_button('Create User')
-
+        
+        fill_in "Email", with: 'test@gmail.com'
         fill_in "Username", with: 'test@gmail.com'
         fill_in "Password", with: '1234'
         fill_in "Confirm Password", with: 'NOMATCH'
@@ -52,12 +55,11 @@ RSpec.describe "Register", type: :feature do
 
         expect(current_path).to eq new_user_path
 
+        expect(page).to have_content('Email')
         expect(page).to have_content('Username')
-        expect(page).to have_content('Password')
         expect(page).to have_button('Create User')
 
-        fill_in "Password", with: '1234'
-        fill_in "Confirm Password", with: 'NOMATCH'
+        fill_in "Username", with: '1234'
 
         click_button 'Create User'
         expect(current_path).to eq new_user_path

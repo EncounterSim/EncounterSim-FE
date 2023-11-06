@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "encounters#new", type: :feature do
   before :each do
-    @user = User.create(username: "user", password: "password")
+    @user = User.create(email: "user@gmail.com", username: "123465", password: "password")
 
     visit root_path
   end
@@ -13,15 +13,14 @@ RSpec.describe "encounters#new", type: :feature do
 
       expect(current_path).to eq(login_path)
   
-      fill_in "Username", with: @user.username
-      fill_in "Password", with: @user.password
-  
-      click_on "Login"
+      fill_in :pemail, with: @user.email
+      click_on "Get a Magic Link"
+      user = User.find_by(email: @user.email)
+      visit "/sessions/create?login_token=#{user.login_token}"
       expect(current_path).to eq root_path
-  
-      
-      expect(page).to have_button("Create a New Encounter")
-      
+      expect(page).to have_content("Congrats, you are signed in!")
+      expect(page).to have_content("Create a New Encounter")
+        
       VCR.use_cassette('encounter_list') do
         click_button "Create a New Encounter"
         expect(current_path).to eq new_encounter_path

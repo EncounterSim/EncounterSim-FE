@@ -1,20 +1,33 @@
 <div class="jumbotron text-center">
 <h1>Login</h1>
+<p>Three ways to login!</p>
 </div>
 
 <div class="text-center">
-  <!-- Login Form -->
-  <%= form_with url: login_path, method: :post do |form| %>
-    <%= form.label :username, "Username" %><br>
-    <%= form.text_field :username %><br><br>
-    <%= form.label :password, "Password" %><br>
-    <%= form.password_field :password %><br><br>
-    <%= form.submit "Login" %>
-  <% end %>
+<p><strong> Standard Login:</strong></p>
+<p>Please enter your email and password to login.</p>
 
-  <%= link_to "Login with GitHub",
-  "https://github.com/login/oauth/authorize?client_id=9efeee337b5dd5eeb0dd&scope=repo" %>
+<!-- Login Form -->
+<%= form_with url: login_path, method: :post do |form| %>
+  <%= form.label :email, "Email" %><br>
+  <%= form.text_field :email %><br><br>
+  <%= form.label :password, "Password" %><br>
+  <%= form.password_field :password %><br><br>
+  <%= form.submit "Login" %><br><br><br>
+<% end %>
 
+<p><strong> Passwordless Login:</strong></p>
+<p>Please enter your email, login link will be emailed.</p>
+<!-- Passwordless Login Form -->
+<%= form_with url: login_path, method: :post do |form| %>
+  <%= form.label :pemail, "Email" %><br>
+  <%= form.text_field :pemail %><br><br>
+  <%= form.submit "Get a Magic Link" %>
+  <% end %><br><br>
+  
+  <p><strong>Github Login:</strong></p>
+  <p><%= link_to "Login with Github",
+  "https://github.com/login/oauth/authorize?client_id=9efeee337b5dd5eeb0dd&scope=repo" %></p>
   <!-- Link to Create Account -->
-  <br><p>Don't have an account? <%= link_to "Create Account", new_user_path %></p>
+  <br><h5>Don't have an account? <%= link_to "Create Account", new_user_path %></h5></p>
 </div>

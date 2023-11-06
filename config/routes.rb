@@ -9,8 +9,14 @@ Rails.application.routes.draw do
   get '/logout', to: 'users#destroy'
 
   get '/auth/github/callback', to: 'github#create'
-  resources :monsters, only: [:index, :show]
+  get 'monsters/page/:page', to: 'monsters#index', as: 'monsters_page'
+  resources :monsters, only: [:index, :show] 
 
   resources :encounters, only: [:new, :create], path: 'create_encounter'
+<<<<<<< HEAD
   resources :encounters, only: [:show]
+=======
+
+  get 'sessions/create'
+>>>>>>> d0c00dd1db1384b18025ffaf80c6655533b71aa4
 end

@@ -10,7 +10,7 @@ class GithubController < ApplicationController
       user.password = "#{github_facade[:id]}#{github_facade[:login]}"
       user.save
     session[:user_id] = user.id
-    flash[:success] = "You've successfully created your account #{user.username}, welcome!"
+    flash[:success] = "You've successfully logged into your account #{user.username}, welcome!"
 
     redirect_to root_path
   end
