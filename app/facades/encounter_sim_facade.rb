@@ -26,6 +26,18 @@ class EncounterSimFacade
     ShowMonster.new(monster)
   end
 
+  def encounter_results(id)
+    results = @service.encounter_results(id)
+    Results.new(results[:data][:attributes])
+  end
+
+  def encounters(id)
+    results = @service.encounters(id)
+    results[:data].map do |sim|
+      Simulation.new(sim)
+    end
+  end
+
   def spell_names
     list = spell_list.map do |spell|
       spell.name
@@ -65,7 +77,12 @@ class EncounterSimFacade
   end
 
   def new_encounter(params)
-    hash = {user_id: params[:id], monster: params[:monster], characters: [params[:char1], params[:char2], params[:char3], params[:char4], params[:char5]]}
-    Result.new(EncounterSimService.new.encounter_creation(hash))
+    hash = {
+      user_id: params[:id],
+      monster: params[:monster],
+      characters: [params[:char1], params[:char2], params[:char3], params[:char4], params[:char5]]
+    }
+    data = EncounterSimService.new.encounter_creation(hash)
+    Results.new(data[:data][:attributes])
   end
 end

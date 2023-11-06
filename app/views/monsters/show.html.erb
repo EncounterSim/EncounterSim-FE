@@ -1,4 +1,4 @@
-<div class="jumbotron text-center">
+<div class="jumbotron text-center" id="monster_name">
   <h1><%= @monster.name %></h1>
 </div>
 <% if @monster.image != nil %>
@@ -8,7 +8,7 @@
 <% end %>
 
 
-<table class="table">
+<table class="table" id="monster_stats">
   <thead>
     <th scope="col">Hit Points</th>
     <th scope="col">Armor class</th>
@@ -34,7 +34,7 @@
 </table>
 
 <h3 class="text-center">Attacks</h3>
-    <table class="table table-bordered">
+    <table class="table table-bordered" id="monster_attacks">
       <thead class="thead-dark">
         <th scope="col">Name</th>
         <th scope="col">Description</th>

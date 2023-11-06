@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/monsters/aboleth
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"1b34371cf863154489f05b44ee830679"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 28c5db57-65e9-4cf3-9bec-46fd72ac13d3
+      X-Runtime:
+      - '0.439914'
+      Server-Timing:
+      - sql.active_record;dur=11.19, start_processing.action_controller;dur=0.00,
+        process_action.action_controller;dur=406.19
+      Content-Length:
+      - '2585'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"sim_monster","attributes":{"id":null,"name":"Aboleth","armor_class":17,"hit_points":135,"strength":5,"dexterity":-1,"constitution":2,"intelligence":4,"wisdom":2,"charisma":4,"attacks":[{"name":"Multiattack","description":"The
+        aboleth makes three tentacle attacks.","action":[{"action_name":"Tentacle","count":3,"type":"melee"}],"hit_bonus":null},{"name":"Tentacle","description":"Melee
+        Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 12 (2d6 + 5) bludgeoning
+        damage. If the target is a creature, it must succeed on a DC 14 Constitution
+        saving throw or become diseased. The disease has no effect for 1 minute and
+        can be removed by any magic that cures disease. After 1 minute, the diseased
+        creature''s skin becomes translucent and slimy, the creature can''t regain
+        hit points unless it is underwater, and the disease can be removed only by
+        heal or another disease-curing spell of 6th level or higher. When the creature
+        is outside a body of water, it takes 6 (1d12) acid damage every 10 minutes
+        unless moisture is applied to the skin before 10 minutes have passed.","action":[],"hit_bonus":9,"saving_throw":{"type":"CON","threshold":14,"success":"none"},"damage_dice":[{"damage_type":{"index":"bludgeoning","name":"Bludgeoning","url":"/api/damage-types/bludgeoning"},"damage_dice":"2d6+5"},{"damage_type":{"index":"acid","name":"Acid","url":"/api/damage-types/acid"},"damage_dice":"1d12"}]},{"name":"Tail","description":"Melee
+        Weapon Attack: +9 to hit, reach 10 ft. one target. Hit: 15 (3d6 + 5) bludgeoning
+        damage.","action":[],"hit_bonus":9,"damage_dice":[{"damage_type":{"index":"bludgeoning","name":"Bludgeoning","url":"/api/damage-types/bludgeoning"},"damage_dice":"3d6+5"}]},{"name":"Enslave","description":"The
+        aboleth targets one creature it can see within 30 ft. of it. The target must
+        succeed on a DC 14 Wisdom saving throw or be magically charmed by the aboleth
+        until the aboleth dies or until it is on a different plane of existence from
+        the target. The charmed target is under the aboleth''s control and can''t
+        take reactions, and the aboleth and the target can communicate telepathically
+        with each other over any distance.\nWhenever the charmed target takes damage,
+        the target can repeat the saving throw. On a success, the effect ends. No
+        more than once every 24 hours, the target can also repeat the saving throw
+        when it is at least 1 mile away from the aboleth.","action":[],"hit_bonus":null,"usage":{"type":"per
+        day","times":3},"saving_throw":{"type":"WIS","threshold":14,"success":"none"}}],"image":"/api/images/monsters/aboleth.png"}}}'
+  recorded_at: Mon, 06 Nov 2023 17:48:14 GMT
+recorded_with: VCR 6.2.0

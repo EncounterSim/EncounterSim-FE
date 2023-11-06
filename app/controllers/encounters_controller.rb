@@ -9,6 +9,15 @@ class EncountersController < ApplicationController
   def create
     params[:id] = session[:user_id]
     @new_encounter = EncounterSimFacade.new.new_encounter(params)
+    redirect_to "/encounters/#{@new_encounter.sim_id}"
+  end
+  
+  def show 
+    @encounter = EncounterSimFacade.new.encounter_results(params[:id])
+  end
+
+  def index
+    @encounters = EncounterSimFacade.new.encounters(session[:user_id])
   end
 
   private
