@@ -19,13 +19,15 @@ class UsersController < ApplicationController
   end
 
   def login
-    user = User.find_by(username: params[:username])
-    if user&.authenticate(params[:password])
-      flash[:success] = "Welcome, #{user.username}!"
-      session[:user_id] = user.id
+    user = User.find_by(email: params[:email])
+    if user
+      user.update!(login_token: SecureRandom.urlsafe_base64, login_token_valid_until: Time.now + 60.minutes)
+      url = "http://localhost:5000/sessions/create?login_token=#{user.login_token}"
+      LoginMailer.send_email(user, url).deliver_later
+      flash[:success] = "Please check your email for login link."
       redirect_to root_path
     else
-      flash[:error] = "There was a problem with your credentials, please try again."
+      flash[:error] = "Email is not associated with an account, please create an account or add another email."
       redirect_to login_path
     end
   end
@@ -39,6 +41,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :password_confirmation)
+    params.require(:user).permit(:email, :username)
   end
 end
