@@ -31,6 +31,11 @@ class EncounterSimFacade
     Results.new(results[:data][:attributes])
   end
 
+  def encounters(id)
+    results = @service.encounters(id)
+    require 'pry';binding.pry
+  end
+
   def spell_names
     list = spell_list.map do |spell|
       spell.name

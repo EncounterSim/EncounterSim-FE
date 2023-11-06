@@ -8,6 +8,7 @@
 <div class="text-center">
   <% if current_user %>
     <h4><%= button_to "Create a New Encounter", new_encounter_path, method: :get %>    </h4>
+    <h4><%= button_to "See all your Encounters", "/encounters", method: :get %></h4>
   <% else %>
     <h4><%= button_to "Create An Account", new_user_path, method: :get %>    </h4>
     <h4><%= button_to "Login", login_path, method: :get %>    </h4>

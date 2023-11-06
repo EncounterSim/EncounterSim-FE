@@ -7,6 +7,7 @@
     <th scope="col">Total Wins</th>
     <th scope="col">Total Losses</th>
     <th scope="col">Total Rounds</th>
+    <th scope="col">Total Combats Simulated</th>
     <th scope="col">Win Percentage</th>
   </thead>
   <tbody>
@@ -14,6 +15,7 @@
       <td><%= @encounter.total_wins %></td>
       <td><%= @encounter.total_losses %></td>
       <td><%= @encounter.total_rounds %></td>
+      <td><%= @encounter.total_combats %></td>
       <td><%= @encounter.win_percentage * 100 %>%</td>
     </tr>
   </tbody>
@@ -21,32 +23,50 @@
 <div style="display: flex;">
     <div class="card" style="width: 20%;">
       <div class="card-title"><h3>P1 Stats</h3></div>
-      <ul class="list-group list_group-flush">
-        <li class="list-group-item">Avg Damage Per Round: <%= @encounter.p1_dmg %></li>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Avg Damage Across All Combats: <%= @encounter.p1_stats[:avg_dmg] %></li>
+        <li class="list-group-item">Avg Hit Rate Across All Combats: <%= @encounter.p1_stats[:hit_rate] %></li>
+        <li class="list-group-item">Total Damage Across Simulation: <%= @encounter.p1_dmg_per_combat %></li>
       </ul>
     </div>
     <div class="card" style="width: 20%;">
       <div class="card-title"><h3>P2 Stats</h3></div>
-      <ul class="list-group list_group-flush">
-        <li class="list-group-item">Avg Damage Per Round: <%= @encounter.p2_dmg %></li>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Avg Damage Per Round: <%= @encounter.p2_stats[:avg_dmg] %></li>
+        <li class="list-group-item">Avg Hit Rate Across All Combats: <%= @encounter.p2_stats[:hit_rate] %></li>
+        <li class="list-group-item">Total Damage Across Simulation: <%= @encounter.p2_dmg_per_combat %></li>
       </ul>
     </div>
     <div class="card" style="width: 20%;">
       <div class="card-title"><h3>P3 Stats</h3></div>
-      <ul class="list-group list_group-flush">
-        <li class="list-group-item">Avg Damage Per Round: <%= @encounter.p3_dmg %></li>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Avg Damage Per Round: <%= @encounter.p3_stats[:avg_dmg] %></li>
+        <li class="list-group-item">Avg Hit Rate Across All Combats: <%= @encounter.p3_stats[:hit_rate] %></li>
+        <li class="list-group-item">Total Damage Across Simulation: <%= @encounter.p3_dmg_per_combat %></li>
       </ul>
     </div>
     <div class="card" style="width: 20%;">
       <div class="card-title"><h3>P4 Stats</h3></div>
-      <ul class="list-group list_group-flush">
-        <li class="list-group-item">Avg Damage Per Round: <%= @encounter.p4_dmg %></li>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Avg Damage Per Round: <%= @encounter.p4_stats[:avg_dmg] %></li>
+        <li class="list-group-item">Avg Hit Rate Across All Combats: <%= @encounter.p4_stats[:hit_rate] %></li>
+        <li class="list-group-item">Total Damage Across Simulation: <%= @encounter.p4_dmg_per_combat %></li>
       </ul>
     </div>
     <div class="card" style="width: 20%;">
       <div class="card-title"><h3>P5 Stats</h3></div>
-      <ul class="list-group list_group-flush">
-        <li class="list-group-item">Avg Damage Per Round: <%= @encounter.p5_dmg %></li>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Avg Damage Per Round: <%= @encounter.p5_stats[:avg_dmg] %></li>
+        <li class="list-group-item">Avg Hit Rate Across All Combats: <%= @encounter.p5_stats[:hit_rate] %></li>
+        <li class="list-group-item">Total Damage Across Simulation: <%= @encounter.p5_dmg_per_combat %></li>
       </ul>
     </div>
+</div>
+
+<div class="card">
+  <h2><div class="card-title" style="text-align: center">Monster Stats</div></h2>
+  <ul class="list-group">
+    <h3><li class="list-group-item" style="text-align: center">Average Monster Damage: <%= @encounter.monster_avg_dmg %></li></h3>
+    <h3><li class="list-group-item" style="text-align: center">Average Monster Hit Rate: <%= @encounter.monster_hit_rate %></li></h3>
+  </ul>
 </div>

@@ -20,6 +20,10 @@ class EncounterSimService
     get_url("/api/v1/encounters/#{id}")
   end
 
+  def encounters(id)
+    get_url("/api/v1/encounters?user=#{id}")
+  end
+
   def encounter_creation(hash_data)
 
     post = conn.post "api/v1/encounters" do |req|
