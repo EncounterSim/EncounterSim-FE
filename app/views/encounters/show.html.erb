@@ -1,4 +1,16 @@
-<h1>Encounter Results:</h1>
-Simulation ID: <%= @encounter.sim_id %>
-Total Wins: <%= @encounter.total_wins %>
-Total Losses: <%= @encounter.total_losses %>
+<div class="jumbotron text-center">
+<h1>Encounter Results</h1>
+</div>
+<h3 class="text-center">Simulation ID: <%= @encounter.sim_id %></h3>
+<table class="table">
+  <thead>
+    <th scope="col">Total Wins</th>
+    <th scope="col">Total Losses</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @encounter.total_wins %></td>
+      <td><%= @encounter.total_losses %></td>
+    </tr>
+  </tbody>
+</table>
