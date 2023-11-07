@@ -38,6 +38,11 @@ class EncounterSimFacade
     end
   end
 
+  def encounter_players(id)
+    results = @service.encounter_players(id)
+    Combat.new(results[:data][:attributes])
+  end
+
   def spell_names
     list = spell_list.map do |spell|
       spell.name
