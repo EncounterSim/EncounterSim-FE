@@ -299,7 +299,7 @@ DEPENDENCIES
   jbuilder
   kaminari
   launchy
-  omniauth
+  omniauth (~> 2.0)
   orderly
   pg (~> 1.1)
   pry
