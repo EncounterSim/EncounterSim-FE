@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   post "/login", to: "users#login"
   get '/create_account', to: 'users#new', as: 'create_account'
   get '/logout', to: 'users#destroy'
-  get '/session_timeout', to: 'users#session_timeout', as: 'session_timeout'
 
   get '/auth/github/callback', to: 'github#create'
   get 'monsters/page/:page', to: 'monsters#index', as: 'monsters_page'

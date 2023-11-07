@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  before_action :check_session_expiry, except: [:new, :create, :login_form, :login, :destroy, :session_timeout]
-  
   def new
     @user = User.new
   end
@@ -46,31 +44,13 @@ class UsersController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    @current_user = nil # Ensure @current_user is cleared
     flash[:notice] = "Logged out successfully."
     redirect_to root_path
-  end
-
-  def session_timeout
-    reset_session # Make sure this line is appropriate for your scenario
-  
-    # Example handling: Redirecting to the login page or rendering a specific view
-    flash[:notice] = "Your session has expired. Please log in again."
-    redirect_to login_path # Replace 'login_path' with your actual login path
   end
 
   private
 
   def user_params
     params.require(:user).permit(:email, :username, :password, :password_confirmation)
-  end
-
-
-  def check_session_expiry
-    if session[:user_id].nil?
-      redirect_to session_timeout_path
-    else
-      reset_session
-    end
   end
 end
