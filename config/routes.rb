@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   get '/auth/github/callback', to: 'github#create'
   get 'monsters/page/:page', to: 'monsters#index', as: 'monsters_page'
+  get 'monsters/page/:page/:id', to: 'monsters#show'
   resources :monsters, only: [:index, :show] 
 
   resources :encounters, only: [:new, :create], path: 'create_encounter'
