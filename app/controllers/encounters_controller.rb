@@ -28,7 +28,7 @@ class EncountersController < ApplicationController
   def require_login
     unless current_user
       flash[:error] = "You must be logged in to access this section"
-      redirect_to login_path # or any other path you prefer for logging in
+      redirect_to login_path
     end
   end
 end
