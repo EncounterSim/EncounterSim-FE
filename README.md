@@ -63,8 +63,11 @@ Designed for use with EncounterSim-BE through parsing of JSON data.
 ## Summary of Work
 - Create an Account / Login Methods
   - Standard Login through email and password entry.
+    - User email, username, and password saved in local FE database
   - Login through Github with authenticaation using Oauth.
+    - Utilizing Oauth removes complexities of authentication and allows the user not to have to provide sensitive credentials to our application.
   - Passworldess Login through Emailed Magic Links.
+    - Passwordless login takes the guess work out of logging in as a user and trying to remember the password for our site. Once a user has registered with our application, logging back in is simple with magic links. Our application will create a user token along with an expiration time for that token. An email link is sent with the necessary credentials and, once clicked, will automatically log them back in if credentials are valid.
 - List of <strong>Monsters</strong> from D&D 5th Edition with detailed information from dnd53api.co API.
   - Pagination offers easy viewing of over 300 Monsters.
   - Information includes: Hit Points, Armor Class, Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma with list of attachs and descriptions.
