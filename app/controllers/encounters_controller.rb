@@ -23,6 +23,8 @@ class EncountersController < ApplicationController
     @encounters = @facade.encounters(session[:user_id])
   end
 
+  private
+
   def require_login
     unless current_user
       flash[:error] = "You must be logged in to access this section"
