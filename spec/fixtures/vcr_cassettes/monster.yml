@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/monsters/aboleth
+    uri: https://encountersim-be-78e8d38428a7.herokuapp.com/api/v1/monsters/aboleth
     body:
       encoding: US-ASCII
       string: ''
@@ -18,6 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 08 Nov 2023 17:02:55 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -33,21 +39,22 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"1b34371cf863154489f05b44ee830679"
+      - W/"1d91d3b2b9eafef543cae0f5651f0d57"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 28c5db57-65e9-4cf3-9bec-46fd72ac13d3
+      - 3ebade68-e74f-4a7c-8e6b-5178073600a7
       X-Runtime:
-      - '0.439914'
-      Server-Timing:
-      - sql.active_record;dur=11.19, start_processing.action_controller;dur=0.00,
-        process_action.action_controller;dur=406.19
+      - '0.023201'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
       Content-Length:
-      - '2585'
+      - '2581'
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":null,"type":"sim_monster","attributes":{"id":null,"name":"Aboleth","armor_class":17,"hit_points":135,"strength":5,"dexterity":-1,"constitution":2,"intelligence":4,"wisdom":2,"charisma":4,"attacks":[{"name":"Multiattack","description":"The
+      string: '{"data":{"id":"6","type":"sim_monster","attributes":{"id":6,"name":"Aboleth","armor_class":17,"hit_points":135,"strength":5,"dexterity":-1,"constitution":2,"intelligence":4,"wisdom":2,"charisma":4,"attacks":[{"name":"Multiattack","description":"The
         aboleth makes three tentacle attacks.","action":[{"action_name":"Tentacle","count":3,"type":"melee"}],"hit_bonus":null},{"name":"Tentacle","description":"Melee
         Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: 12 (2d6 + 5) bludgeoning
         damage. If the target is a creature, it must succeed on a DC 14 Constitution
@@ -70,5 +77,5 @@ http_interactions:
         more than once every 24 hours, the target can also repeat the saving throw
         when it is at least 1 mile away from the aboleth.","action":[],"hit_bonus":null,"usage":{"type":"per
         day","times":3},"saving_throw":{"type":"WIS","threshold":14,"success":"none"}}],"image":"/api/images/monsters/aboleth.png"}}}'
-  recorded_at: Mon, 06 Nov 2023 17:48:14 GMT
+  recorded_at: Wed, 08 Nov 2023 17:02:56 GMT
 recorded_with: VCR 6.2.0
