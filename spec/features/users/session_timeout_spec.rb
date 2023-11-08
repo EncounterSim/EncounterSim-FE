@@ -19,6 +19,7 @@ RSpec.describe 'Session timeout', type: :feature do
     expect(page).to have_content("Create a New Encounter")
 
     expect(page).to have_current_path(root_path)
+    expect(page).to have_content('Log Out')
 
     Timecop.travel(15.minutes.from_now)
     
