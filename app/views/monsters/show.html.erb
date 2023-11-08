@@ -1,6 +1,13 @@
 <div class="jumbotron text-center" id="monster_name">
   <h1><%= @monster.name %></h1>
 </div>
+
+<% if @previous_page != nil %>
+  <p><%= link_to "Return to Previous Page", monsters_page_path(@previous_page) %></p>
+<% else %>
+  <p><%= link_to "Return to Previous Page", monsters_path %></p>
+<% end %>
+
 <% if @monster.image != nil %>
   <div class="text-center">
     <image src="https://www.dnd5eapi.co<%= @monster.image %>" alt="No Picture Available"></image>

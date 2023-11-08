@@ -14,7 +14,12 @@
     <% @monsters.each do |monster| %>
       <tr>
           <td><center><%= monster.name %></center></td>
-          <td><center><%= link_to "#{monster.name} Data", "monsters/#{monster.index}" %><center></td>
+          <% if @page != nil %>
+            <td><center><%= link_to "#{monster.name} Data", "/monsters/page/#{@page}/#{monster.index}" %><center></td>
+          <% else %>
+            <td><center><%= link_to "#{monster.name} Data", "/monsters/#{monster.index}" %><center></td>
+          <% end %>
+
       </tr>
         <% end %>
     </tbody>

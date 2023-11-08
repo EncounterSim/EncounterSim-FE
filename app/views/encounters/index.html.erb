@@ -1,6 +1,21 @@
 <div class="jumbotron text-center">
   <h1>Saved Encounters</h1>
 </div>
-<% @encounters.each do |encounter| %>
-  <h3><%= link_to encounter.id, "/encounters/#{encounter.id}", method: :get  %></h3><br>
-<% end %>
+<div>
+  <table class="table">
+    <thead>
+      <th scope="col">Encounter ID</th>
+      <th scope="col">Encounter characters</th>
+      <th scope="col">Encounter Link</th>
+    </thead>
+    <tbody>
+    <% @encounters.each do |encounter| %>
+      <tr>
+        <td><%= encounter.id %></td>
+        <td><%= @facade.encounter_players(encounter.id).players %></td>
+        <td><%= link_to "Link", "/encounters/#{encounter.id}", method: :get  %></td>
+      </tr>
+    </tbody>
+    <% end %>
+  </table>
+</div>
