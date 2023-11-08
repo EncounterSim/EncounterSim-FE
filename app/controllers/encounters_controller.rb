@@ -1,4 +1,6 @@
 class EncountersController < ApplicationController
+  before_action :require_login
+
   def new
     @encounter = EncounterSimFacade.new
     @monsters = @encounter.monster_names
@@ -21,8 +23,10 @@ class EncountersController < ApplicationController
     @encounters = @facade.encounters(session[:user_id])
   end
 
-  private
-  # def encounter_params
-  #   params.permit(:monster, :class_1, :level_1, :ability_modifiers_1, :class_2, :level_2, :ability_modifiers_2, :class_2, :level_2, :ability_modifiers_2, :class_3, :level_3, :ability_modifiers_3, :class_4, :level_4, :ability_modifiers_4, :class_5, :level_5, :ability_modifiers_5, :class_6, :level_6, :ability_modifiers_6)
-  # end
+  def require_login
+    unless current_user
+      flash[:error] = "You must be logged in to access this section"
+      redirect_to login_path # or any other path you prefer for logging in
+    end
+  end
 end
