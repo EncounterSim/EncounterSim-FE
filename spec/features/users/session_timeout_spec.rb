@@ -18,14 +18,11 @@ RSpec.describe 'Session timeout', type: :feature do
     expect(page).to have_content("Congrats, you are signed in!")
     expect(page).to have_content("Create a New Encounter")
 
-    expect(page).to have_current_path(root_path)
-
-    expect(page).to have_content('Log Out')
-    
     Timecop.travel(15.minutes.from_now)
+    
+    click_on "Create a New Encounter"
 
-    visit root_path
-
-    expect(page).to have_content('Login')
+    expect(current_path).to eq(login_path)
+    expect(page).to have_content("You must be logged in to access this section")
   end
 end
