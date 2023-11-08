@@ -27,7 +27,7 @@
   
   <p><strong>Github Login:</strong></p>
   <p><%= link_to "Login with Github",
-  "https://github.com/login/oauth/authorize?client_id=9efeee337b5dd5eeb0dd&scope=repo" %></p>
+  "https://github.com/login/oauth/authorize?client_id=#{Rails.application.credentials.github[:client_id]}&scope=repo" %></p>
   <!-- Link to Create Account -->
   <br><h5>Don't have an account? <%= link_to "Create Account", new_user_path %></h5></p>
 </div>

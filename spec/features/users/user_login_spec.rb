@@ -86,4 +86,17 @@ it "cannot login with invalid credentials" do
     expect(current_path).to eq root_path
     expect(page).to have_content("Invalid or expired login link")
   end
+
+  it "can log in to github using Oauth authentication" do
+    user_2 = User.create(username: "test", password: "1234", email: nil, token: "gho_aspF2tpH7ochmBAHvhsD1j1RyjhWdV2nEPE4", uid: "999999999")
+    click_on "Login"
+
+    expect(page).to have_content("Login with Github")
+
+    VCR.use_cassette('gith_hub_login') do
+
+      visit '/auth/github/callback'
+
+    end
+  end
 end

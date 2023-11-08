@@ -43,15 +43,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3eaeee93-dd8c-4de7-8547-ff2b0f6a6ab3
+      - cac5e3f4-6b15-4e5c-8774-2071e81b3dd7
       X-Runtime:
-      - '0.026497'
-      Strict-Transport-Security:
-      - max-age=63072000; includeSubDomains
+      - '0.431211'
+      Server-Timing:
+      - sql.active_record;dur=15.42, start_processing.action_controller;dur=0.00,
+        process_action.action_controller;dur=390.10
       Content-Length:
       - '43430'
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[{"id":null,"type":"monster","attributes":{"id":null,"name":"Aboleth","url":"/api/monsters/aboleth","index":"aboleth"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Acolyte","url":"/api/monsters/acolyte","index":"acolyte"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Adult
@@ -231,5 +230,5 @@ http_interactions:
         Red Dragon","url":"/api/monsters/young-red-dragon","index":"young-red-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Young
         Silver Dragon","url":"/api/monsters/young-silver-dragon","index":"young-silver-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Young
         White Dragon","url":"/api/monsters/young-white-dragon","index":"young-white-dragon"}},{"id":null,"type":"monster","attributes":{"id":null,"name":"Zombie","url":"/api/monsters/zombie","index":"zombie"}}]}'
-  recorded_at: Wed, 08 Nov 2023 17:02:55 GMT
+  recorded_at: Wed, 08 Nov 2023 22:44:04 GMT
 recorded_with: VCR 6.2.0
