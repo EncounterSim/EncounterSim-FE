@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/v1/spells
+    uri: https://encountersim-be-78e8d38428a7.herokuapp.com/api/v1/spells
     body:
       encoding: US-ASCII
       string: ''
@@ -18,6 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 08 Nov 2023 17:02:56 GMT
+      Connection:
+      - keep-alive
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -37,13 +43,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a2f75478-8351-47cb-895d-ebcae4ff449b
+      - 21aa71a0-7240-401f-8a14-94f6931825c3
       X-Runtime:
-      - '0.345870'
-      Server-Timing:
-      - start_processing.action_controller;dur=0.02, process_action.action_controller;dur=324.98
+      - '0.022684'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
       Content-Length:
       - '34232'
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[{"id":null,"type":"spell","attributes":{"id":null,"name":"Acid
@@ -261,5 +269,5 @@ http_interactions:
         Wall","url":"/api/spells/wind-wall"}},{"id":null,"type":"spell","attributes":{"id":null,"name":"Wish","url":"/api/spells/wish"}},{"id":null,"type":"spell","attributes":{"id":null,"name":"Word
         of Recall","url":"/api/spells/word-of-recall"}},{"id":null,"type":"spell","attributes":{"id":null,"name":"Zone
         of Truth","url":"/api/spells/zone-of-truth"}}]}'
-  recorded_at: Thu, 02 Nov 2023 00:28:17 GMT
+  recorded_at: Wed, 08 Nov 2023 18:18:56 GMT
 recorded_with: VCR 6.2.0
